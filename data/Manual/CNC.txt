@@ -1,0 +1,3929 @@
+Operation Software
+CNC Operator
+Operation Manual
+SYSMAC-RTNC
+O032-E1-01
+All rights reserved. No part of this publication may be reproduced, stored in a retrieval system, or transmitted, in 
+any form, or by any means, mechanical, electronic, photocopying, recording, or otherwise, without the prior 
+written permission of OMRON.
+ 
+No patent liability is assumed with respect to the use of the information contained herein. Moreover, because 
+OMRON is constantly striving to improve its high-quality products, the information contained in this manual is 
+subject to change without notice. Every precaution has been taken in the preparation of this manual. Neverthe-
+less, OMRON assumes no responsibility for errors or omissions. Neither is any liability assumed for damages 
+resulting from the use of the information contained in this publication.
+• Sysmac and SYSMAC are trademarks or registered trademarks of OMRON Corporation in Japan and other 
+countries for OMRON factory automation products.
+ 
+• Microsoft, Windows, Windows Vista, Excel, and Visual Basic are either registered trademarks or trademarks of 
+Microsoft Corporation in the United States and other countries.
+ 
+• EtherCAT® is registered trademark and patented technology, licensed by Beckhoff Automation GmbH, Germany.
+ 
+• ODVA, CIP, CompoNet, DeviceNet, and EtherNet/IP are trademarks of ODVA.
+ 
+• The SD and SDHC logos are trademarks of SD-3C, LLC.
+ 
+ 
+• Celeron, Intel and Intel Core are trademarks of Intel Corporation in the U.S. and / or other countries.
+ 
+Other company names and product names in this document are the trademarks or registered trademarks of their 
+respective companies.
+Trademarks
+Copyrights
+NOTE
+Microsoft product screen shots reprinted with permission from Microsoft Corporation.
+1
+  Introduction
+CNC Operator Operation Manual (O032)
+Introduction
+Thank you for purchasing the software CNC Operator for the Sysmac NJ/NY-series NC integrated con-
+troller (hereinafter referred to as CNC Controller).
+The CNC Operator software enables your PC or IPC to be used as the operator console of the CNC 
+Controller.
+This manual describes how to operate CNC Operator when primarily using the CNC Controller.
+Use this manual together with the user's manuals for the other devices that you use.
+This manual is intended for the following personnel, who must also have knowledge of electrical sys-
+tems (an electrical engineer or the equivalent).
+• Personnel in charge of introducing FA systems.
+• Personnel in charge of designing FA systems.
+• Personnel in charge of installing and maintaining FA systems.
+• Personnel in charge of managing FA systems and facilities.
+For the NC programming language, this manual is intended for personnel who understand the program-
+ming language specifications in international standard ISO6983-1 or Japanese standard JIS 6315.
+For other programming languages, this manual is intended for personnel who understand the program-
+ming language specifications in international standard IEC 61131-3 or Japanese standard JIS B 3503.
+This manual contains information that is necessary to use CNC Operator. Please read and understand 
+this manual before using the software. Keep this manual in a safe place where it will be available for ref-
+erence during operation.
+Intended Audience
+Notice
+   Manual Structure
+2
+CNC Operator Operation Manual (O032)
+Manual Structure
+The following page structure and symbols are used in this user’s manual.
+Note This illustration is provided only as a sample. It may not literally appear in this manual.
+Page Structure
+4-9
+4   Installation and Wiring
+NJ-series CPU Unit Hardware User’s Manual (W500)
+s
+t
+i
+n
+U
+g
+n
+i
+t
+n
+u
+o
+M
+3
+-
+4
+4
+s
+t
+n
+e
+n
+o
+p
+m
+o
+C
+r
+e
+l
+l
+o
+r
+t
+n
+o
+C
+g
+n
+i
+t
+c
+e
+n
+n
+o
+C
+1
+-
+3
+-
+4
+4-3
+Mounting Units
+The Units that make up an NJ-series Controller can be connected simply by pressing the Units together
+and locking the sliders by moving them toward the back of the Units. The End Cover is connected in the
+same way to the Unit on the far right side of the Controller. 
+1
+Join the Units so that the connectors fit exactly.
+2
+The yellow sliders at the top and bottom of each Unit lock the Units together. Move the sliders
+toward the back of the Units as shown below until they click into place.
+Precautions for Correct Use
+Precautions for Correct Use
+4-3-1
+Connecting Controller Components
+Connector
+Hook
+Hook holes
+Slider
+Lock
+Release
+Move the sliders toward the back 
+until they lock into place.
+Level 1 heading
+Level 2 heading
+Level 3 heading
+Level 2 heading
+A step in a procedure
+Manual name
+Special information
+Level 3 heading
+Page tab
+Gives the current 
+headings.
+Indicates a procedure.
+Icons indicate 
+precautions, additional 
+information, or reference 
+information.
+Gives the number 
+of the main section.
+The sliders on the tops and bottoms of the Power Supply Unit, CPU Unit, I/O Units, Special I/O 
+Units, and CPU Bus Units must be completely locked (until they click into place) after connecting 
+the adjacent Unit connectors.
+3
+  Manual Structure
+CNC Operator Operation Manual (O032)
+Special information in this manual is classified as follows:
+Precautions for Safe Use
+Precautions on what to do and what not to do to ensure safe usage of the product.
+Precautions for Correct Use
+Precautions on what to do and what not to do to ensure proper operation and performance.
+Additional Information
+Additional information to read as required.
+This information is provided to increase understanding or make operation easier.
+Version Information
+Information on differences in specifications and functionality for CPU Units with different unit 
+versions and for different versions of the Sysmac Studio is given.
+• For terminology related to the CPU unit and controller used in this manual, refer to the terminology 
+explained in the NJ/NX-series CPU Unit Software User’s Manual (Cat. No. W501), NJ/NY-Series NC 
+Integrated Controller User’s Manual (Cat. No. O030), or NY-series IPC Machine Controller Industrial 
+Panel PC / Industrial Box PC Software User’s Manual (Cat. No. W558).
+• In this manual, "download" refers to transferring data from CNC Operator to the physical Controller.
+• In this manual, the controller feature that is integrated in the NY-series Industrial PC may be referred 
+to as an NY-series Controller.
+• CNC Operator supports the NJ/NY-series Controllers. Unless another Controller series is specified, 
+the operating procedures and screen captures used in the manual are examples for the NJ-series 
+CNC Controllers.
+For descriptions of the Controller terms that are used in this manual, refer to information on terminology 
+in the manuals that are listed in Related Manuals on page 18.
+Special Information
+Precaution on Terminology
+Terminology
+   Manual Structure
+4
+CNC Operator Operation Manual (O032)
+5
+  Sections in this Manual
+CNC Operator Operation Manual (O032)
+1
+2
+3
+A
+I
+1
+2
+3
+A
+I
+CNC Operator Overview
+Basic Operations of CNC Operator
+Features of CNC Operator
+Appendices
+Index
+Sections in this Manual
+CONTENTS
+6
+CNC Operator Operation Manual (O032)
+CONTENTS
+Introduction ..............................................................................................................1
+Intended Audience....................................................................................................................................... 1
+Notice........................................................................................................................................................... 1
+Manual Structure ......................................................................................................2
+Page Structure............................................................................................................................................. 2
+Special Information ...................................................................................................................................... 3
+Precaution on Terminology .......................................................................................................................... 3
+Terminology ................................................................................................................................................. 3
+Sections in this Manual ...........................................................................................5
+Terms and Conditions Agreement..........................................................................8
+Safety Precautions ...................................................................................................9
+Definition of Precautionary Information........................................................................................................ 9
+Symbols..................................................................................................................................................... 10
+Precautions for Safe Use.......................................................................................12
+Precautions for Correct Use..................................................................................13
+Regulations and Standards...................................................................................14
+Software Licenses and Copyrights ............................................................................................................ 14
+Versions ..................................................................................................................15
+Checking Versions..................................................................................................................................... 15
+Related Manuals .....................................................................................................18
+Revision History .....................................................................................................21
+Section 1 
+CNC Operator Overview
+1-1
+What is CNC Operator?......................................................................................................... 1-2
+Section 2 
+Basic Operations of CNC Operator
+2-1
+Installation.............................................................................................................................. 2-2
+2-1-1
+System requirement....................................................................................................................2-2
+2-1-2
+Installation Procedure .................................................................................................................2-2
+2-1-3
+Uninstallation Procedure.............................................................................................................2-3
+2-2
+System Design....................................................................................................................... 2-4
+2-2-1
+Basic Design Flow.......................................................................................................................2-4
+2-2-2
+Outline of System Design............................................................................................................2-5
+Section 3 
+Features of CNC Operator
+3-1
+Starting and Exiting CNC Operator...................................................................................... 3-3
+3-2
+User Interface......................................................................................................................... 3-4
+7
+CONTENTS
+CNC Operator Operation Manual (O032)
+3-3
+Features and Settings of CNC Operator.............................................................................. 3-8
+3-3-1
+CNC Controller Connection Settings .......................................................................................... 3-8
+3-3-2
+Axis Settings............................................................................................................................. 3-10
+3-3-3
+Tool Status ................................................................................................................................ 3-12
+3-3-4
+NC Program Status................................................................................................................... 3-12
+3-3-5
+G Codes (Modal Group) ........................................................................................................... 3-13
+3-3-6
+Display and Pin Display of Setting Items.................................................................................. 3-14
+3-3-7
+General Application Settings .................................................................................................... 3-15
+3-3-8
+Message Log ............................................................................................................................ 3-25
+3-3-9
+Memo Function......................................................................................................................... 3-25
+3-3-10
+Common Functions................................................................................................................... 3-25
+3-4
+Function Execution Conditions and Operating Modes.................................................... 3-26
+3-5
+Tool Offsets/Workpiece Offsets.......................................................................................... 3-29
+3-5-1
+Tool Offset Management........................................................................................................... 3-29
+3-5-2
+Work Offset Management......................................................................................................... 3-30
+3-6
+NC Programs........................................................................................................................ 3-32
+3-6-1
+AUTO........................................................................................................................................ 3-32
+3-6-2
+Full Screen Editor ..................................................................................................................... 3-34
+3-6-3
+NC Subprograms...................................................................................................................... 3-35
+3-6-4
+Queue....................................................................................................................................... 3-36
+3-7
+MDI (Manual Data Input)...................................................................................................... 3-37
+3-7-1
+Switching Modes....................................................................................................................... 3-37
+3-7-2
+Vertical button bar..................................................................................................................... 3-39
+3-7-3
+Soft Control Panel (Velocity Override)...................................................................................... 3-43
+3-7-4
+Manual Mode............................................................................................................................ 3-45
+3-8
+Test Run ............................................................................................................................... 3-47
+3-8-1
+CNC Motor Compensation........................................................................................................ 3-47
+3-8-2
+Correction of NC Program ........................................................................................................ 3-48
+3-8-3
+Simulation................................................................................................................................. 3-48
+3-9
+Field Operation .................................................................................................................... 3-49
+3-9-1
+Connection with CNC Controller............................................................................................... 3-49
+3-9-2
+Display of the Running Program and the Path ......................................................................... 3-49
+3-9-3
+Login User Information ............................................................................................................. 3-50
+3-9-4
+Functions to Change Screen Display ....................................................................................... 3-50
+3-9-5
+Alarms....................................................................................................................................... 3-51
+3-9-6
+Message Status Bar.................................................................................................................. 3-51
+3-9-7
+Watchdog Indicator................................................................................................................... 3-51
+3-9-8
+NC Parameter Window............................................................................................................. 3-52
+3-9-9
+Axis Parameter Window ........................................................................................................... 3-53
+3-10 Troubleshooting .................................................................................................................. 3-54
+3-10-1
+Event Viewer............................................................................................................................. 3-54
+3-10-2
+Back Trace................................................................................................................................ 3-55
+3-11 Starting from the Sysmac Studio ....................................................................................... 3-56
+Appendices
+A-1
+Customization by SDK..........................................................................................................A-2
+A-2
+ Setting SYSMAC Gateway, Communications Middleware................................................A-3
+A-3
+Heartbeat Configuration Example........................................................................................A-7
+Index
+   Terms and Conditions Agreement
+8
+CNC Operator Operation Manual (O032)
+Terms and Conditions Agreement
+z WARRANTY
+• The warranty period for the Software is one year from the date of purchase, unless otherwise spe-
+cifically agreed.
+• If the User discovers defect of the Software (substantial non-conformity with the manual), and 
+return it to OMRON within the above warranty period, OMRON will replace the Software without 
+charge by offering media or download from OMRON’s website. And if the User discovers defect of 
+media which is attributable to OMRON and return it to OMRON within the above warranty period, 
+OMRON will replace defective media without charge. If OMRON is unable to replace defective 
+media or correct the Software, the liability of OMRON and the User’s remedy shall be limited to 
+the refund of the license fee paid to OMRON for the Software.
+z LIMITATION OF LIABILITY
+• THE ABOVE WARRANTY SHALL CONSTITUTE THE USER’S SOLE AND EXCLUSIVE REME-
+DIES AGAINST OMRON AND THERE ARE NO OTHER WARRANTIES, EXPRESSED OR 
+IMPLIED, INCLUDING BUT NOT LIMITED TO, WARRANTY OF MERCHANTABILITY OR FIT-
+NESS FOR PARTICULAR PURPOSE. IN NO EVENT, OMRON WILL BE LIABLE FOR ANY 
+LOST PROFITS OR OTHER INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAM-
+AGES ARISING OUT OF USE OF THE SOFTWARE.
+• OMRON SHALL HAVE NO LIABILITY FOR DEFECT OF THE SOFTWARE BASED ON MODIFI-
+CATION OR ALTERNATION TO THE SOFTWARE BY THE USER OR ANY THIRD PARTY.
+• OMRON SHALL HAVE NO LIABILITY FOR SOFTWARE DEVELOPED BY THE USER OR ANY 
+THIRD PARTY BASED ON THE SOFTWARE OR ANY CONSEQUENCE THEREOF.
+z APPLICABLE CONDITIONS
+USER SHALL NOT USE THE SOFTWARE FOR THE PURPOSE THAT IS NOT PROVIDED IN 
+THE ATTACHED USER MANUAL.
+z CHANGE IN SPECIFICATION
+The software specifications and accessories may be changed at any time based on improvements 
+and other reasons.
+z ERRORS AND OMISSIONS
+The information in this manual has been carefully checked and is believed to be accurate; however, 
+no responsibility is assumed for clerical, typographical, or proofreading errors, or omissions.
+9
+  Safety Precautions
+CNC Operator Operation Manual (O032)
+Safety Precautions
+The following notation is used in this manual to provide precautions required to ensure safe usage of 
+CNC Operator and the CNC Controller.
+The safety precautions that are provided are extremely important to ensure safety. Always read and 
+heed the information provided in all safety precautions.
+The following notation is used.
+Precautions for Safe Use
+Indicates precautions on what to do and what not to do to ensure safe usage of the product.
+Precautions for Correct Use
+Indicates precautions on what to do and what not to do to ensure proper operation and perfor-
+mance.
+Definition of Precautionary Information
+WARNING
+Caution
+Indicates a potentially hazardous situation which, if not avoided, 
+could result in death or serious injury. Additionally, there may be 
+severe property damage.
+Indicates a potentially hazardous situation which, if not avoided, 
+may result in minor or moderate injury, or property damage.
+   Safety Precautions
+10
+CNC Operator Operation Manual (O032)
+ 
+Symbols
+The circle and slash symbol indicates operations that you must not do.
+The specific operation is shown in the circle and explained in text.
+This example indicates prohibiting disassembly.
+The triangle symbol indicates precautions (including warnings).
+The specific operation is shown in the triangle and explained in text.
+This example indicates a precaution against electric shock.
+The triangle symbol indicates precautions (including warnings).
+The specific operation is shown in the triangle and explained in text.
+This example indicates a general precaution.
+The filled circle symbol indicates operations that you must do.
+The specific operation is shown in the circle and explained in text.
+This example shows a general precaution for something that you must 
+do.
+Check the NC program for proper execution before you use it for actual operation.
+Check the parameters for proper execution before you use them for actual operation.
+Always confirm safety at the destination node before you transfer an NC program from 
+CNC Operator.
+The devices or machines may perform unexpected operations regardless of the operating 
+mode of the CPU Unit.
+If you disconnect the USB dongle during operation, CNC Operator stops operating. In the 
+controller program, configure a control circuit to safely stop the system even if CNC Opera-
+tor stops operating. For example, it should execute heartbeat processing between CNC 
+Operator and the controller, and stop the system when the heartbeat is lost. Accidents may 
+occur if the system performs unexpected operations. For the detailed heartbeat configura-
+tion method, refer to A-3 Heartbeat Configuration Example on page A-7.
+WARNING
+11
+  Safety Precautions
+CNC Operator Operation Manual (O032)
+ 
+Although the Simulator simulates the operation of the Controller, there are difference from 
+the Controller in operation and timing.
+After you debug the user program on the Simulator, always check operations on the physi-
+cal Controller before you use the user program to operate the controlled system.
+Accidents may occur if the system performs unexpected operations.
+Always confirm safety before you reset the system.
+Always confirm safety at the destination node before you transfer an NC program to a 
+node.
+Not doing so may result in injury.
+Caution
+   Precautions for Safe Use
+12
+CNC Operator Operation Manual (O032)
+Precautions for Safe Use
+• Confirm that no adverse effect will occur in the system before you attempt any of the following.
+• Changing operating modes (edit, MANUAL AUTO, MDI) by CNC Operator, including operating 
+mode setting upon power-ON.
+• Changing NC program or settings (tool offset, work offset, CNC motor compensation table, etc.)
+• When changing a CNC motor compensation table data in the CPU Unit, store the data on the 
+retained type memory or save it to a file, so that the data will be loaded when the power is turned ON 
+again. Otherwise, the previous status will be restored when the power is turned on again, which may 
+cause an unexpected machine operation to occur.
+• Confirm the target coordinate system and axis number carefully before you run manual operation 
+(jog, spindle operation).
+• Manual operation (jog, spindle operation) involves motor operation. Refer to the operation manual 
+before you run manual operation. 
+Be particularly careful of the following points.
+• Confirm safety around all moving parts.
+• When you click the Run button, the motor begins actual operation at the specified speed. Only 
+begin motor operation if you are absolutely sure there is no danger if you start the motor.
+• Always have an external emergency stop device available.
+• Sometimes you may be unable to stop the motor from your computer. Install an external emer-
+gency stop device so that you can stop the motor immediately if needed.
+• Operate the motor only when you can clearly confirm the motor operation so that you can react 
+quickly in the case of any danger that may arise due to operation of the motor.
+• A communications error will occur if you attempt to begin operations without EtherCAT communi-
+cations. Always establish EtherCAT communications first.
+• Be aware of all the precautions that you need to take during manual operation.
+• During manual operation, only the tool has any control of the operation. Any commands from 
+motion control instructions or CNC control instructions are ignored.
+If communications are interrupted between the CNC Operator and Controller during test run operations, 
+you will not be able to stop the motor from the computer. Provide an external hardware means that you 
+can use to stop the motor without fail.
+• Executing Feed Hold Reset automatically returns the system to the feed hold stop position at rapid 
+feed. Confirm that there are no obstacles on the return path before you execute Feed Hold Reset.
+Operation
+Manual Operation
+Automatic Operation and MDI
+13
+  Precautions for Correct Use
+CNC Operator Operation Manual (O032)
+Precautions for Correct Use
+• Observe the following precautions when you start CNC Operator.
+• Exit all applications that are not necessary to use CNC Operator. For virus checker or other soft-
+ware that could affect the startup and operations of CNC Operator, take measures such as to 
+remove CNC Operator from the scope of virus checking.
+• If any hard disks or printers that are connected to the computer are shared with other computers 
+on a network, isolate them so that they are no longer shared.
+• With some notebook computers, the default settings do not supply power to Ethernet port to save 
+energy. There are energy-saving settings in Windows, and also sometimes in utilities or the BIOS 
+of the computer. Refer to the user documentation for your computer and disable all energy-saving 
+features.
+• When a change is made in the ini file, check that it will not affect facilities before starting CNC 
+Operator.
+• Securely confirm program operations in the project, main program, sub program, and connected 
+controller sides before starting the actual application system.
+• While CNC Operator is running, be careful of the following points.
+• Do not exit CNC Operator while the equipment is running.
+• Do not download the NC program from CNC Operator while the NC program is running.
+   Regulations and Standards
+14
+CNC Operator Operation Manual (O032)
+Regulations and Standards
+• This product incorporates certain third party software.
+Software Licenses and Copyrights
+15
+  Versions
+CNC Operator Operation Manual (O032)
+Versions
+Unit versions are used to manage the hardware and software in NJ-series Units and EtherCAT slaves. 
+The unit version is updated each time a change is made to hardware or software specifications. Even 
+when two Units or EtherCAT slaves have the same model number, they will have functional or perfor-
+mance differences if they have different unit versions.
+ 
+You can check versions on the ID information indications or with the Sysmac Studio.
+The version can be checked by reading the identification information label on the side of the product.
+z Checking the Unit Version of an NJ-series CPU Unit
+The ID information on the NJ501-5300 NJ CNC CPU Unit is shown below.
+z Checking the Unit Version of an NY-series CPU Unit
+The ID information on an NY-series NY52-5 CPU Unit is shown below.
+Checking Versions
+Checking Unit Versions on ID Information Indications
+NJ501 - 5300
+Ver.1.
+PORT1 MAC ADDRESS: 
+PORT2 MAC ADDRESS: 
+Lot No. DDMYY
+xxxx
+ID information indication
+Unit model
+Unit version
+
+
+
+
+MAC address
+Lot number and serial number
+CNC Ver.1.00
+CNC version
+ID information indication
+Unit version
+CNC version
+Ver.1.
+CNC Ver.1.00
+   Versions
+16
+CNC Operator Operation Manual (O032)
+You can use the Sysmac Studio to check unit versions. The procedure is different for Units and for Eth-
+erCAT slaves.
+z Checking the Unit Version of an NJ-series CPU Unit
+You can use the Production Information while the Sysmac Studio is online to check the unit version
+of a Unit. You can do this for the CPU Unit, CJ-series Special I/O Units, and CJ-series CPU Bus
+Units. You cannot check the unit versions of CJ-series Basic I/O Units with the Sysmac Studio.
+Use the following procedure to check the unit version.
+1
+Double-click CPU/Expansion Racks under Configurations and Setup in the Multiview
+Explorer. Or, right-click CPU/Expansion Racks under Configurations and Setup and select Edit
+from the menu.
+The Unit Editor is displayed.
+2
+Right-click any open space in the Unit Editor and select Production Information.
+The Production Information dialog box is displayed.
+z Checking the Unit Version of an NY-series CPU Unit
+You can use the Production Information while the Sysmac Studio is online to check the unit version 
+of a Unit. You can only do this for the Controller.
+1
+Right-click CPU Rack under Configurations and Setup - CPU/Expansion Racks in the Multi-
+view Explorer and select Production Information.
+The Production Information dialog box is displayed.
+z Changing Information Displayed in Production Information Dialog Box
+1
+Click the Show Detail or Show Outline button at the lower right of the Production Information
+dialog box.
+The view will change between the production information details and outline.
+ 
+The information that is displayed is different for the Outline View and Detail View. The Detail View
+displays the unit version, hardware version, and software versions. The Outline View displays only
+the unit version.
+Checking Unit Versions with the Sysmac Studio
+Outline View
+Detail View
+17
+  Versions
+CNC Operator Operation Manual (O032)
+z Checking the Unit Version of an EtherCAT Slave
+You can use the Production Information while the Sysmac Studio is online to check the unit version
+of an EtherCAT slave. Use the following procedure to check the unit version.
+1
+Double-click EtherCAT under Configurations and Setup in the Multiview Explorer. Otherwise,
+right-click EtherCAT under Configurations and Setup, and select Edit.
+The EtherCAT Tab Page is displayed.
+2
+Right-click the master on the EtherCAT Tab Page and select Display Production Information.
+The Production Information dialog box is displayed.
+The unit version is displayed after "Rev."
+z Changing Information Displayed in Production Information Dialog Box
+1
+Click the Show Detail or Show Outline button at the lower right of the Production Information 
+dialog box.
+The view will change between the production information details and outline.
+Outline View
+Detail View
+   Related Manuals
+18
+CNC Operator Operation Manual (O032)
+Related Manuals
+The following manuals are related. Use these manuals for reference.
+ 
+Manual name
+Cat. No.
+Model numbers
+Application
+Description
+NJ-Series CPU Unit 
+Hardware User’s Manual
+W500
+NJ501-
+NJ301-
+NJ101-
+Learning the basic 
+specifications of the 
+NJ-series CPU Units, 
+including introductory 
+information, 
+designing, 
+installation, and main-
+tenance. 
+Mainly hardware infor-
+mation is provided.
+Provides an introduction to the entire 
+NJ-series system along with the following 
+information on the CPU Unit.
+• Features and system configuration
+• Introduction
+• Part names and functions
+• General specifications
+• Installation and wiring
+• Maintenance and inspection
+NJ/NX-series CPU Unit Soft-
+ware User's Manual
+W501
+NX701-
+NX1P2-
+NJ501-
+NJ301-
+NJ101-
+Learning how to pro-
+gram and set up an 
+NJ/NX-series CPU 
+Unit. 
+Mainly software infor-
+mation is provided.
+Provides the following information on a Con-
+troller built with an NJ/NX-series CPU Unit.
+• CPU Unit operation
+• CPU Unit features
+• Initial settings
+• Language specifications and programming 
+based on IEC 61131-3
+NJ/NX-series Instructions Ref-
+erence Manual
+W502
+NX701-
+NX1P2-
+NJ501-
+NJ301-
+NJ101-
+Learning detailed 
+specifications on the 
+basic instructions of 
+an NJ/NX-series CPU 
+Unit.
+Describes the instructions in the instruction 
+set (IEC 61131-3 specifications).
+NJ/NX-series CPU Unit Motion 
+Control User’s Manual
+W507
+NX701-
+NX1P2-
+NJ501-
+NJ301-
+NJ101-
+Learning about 
+motion control set-
+tings and program-
+ming concepts.
+Describes the settings and operation of the 
+CPU Unit and programming concepts for 
+motion control.
+NJ/NX-series Motion Control 
+Instructions Reference Manual
+W508
+NX701-
+NX1P2-
+NJ501-
+NJ301-
+NJ101-
+Learning about the 
+detailed motion 
+instruction specifica-
+tions
+Describes the motion control instructions.
+NJ/NX-Series 
+CPU Unit
+ Built-in EtherCAT® Port 
+User’s Manual
+W505
+NX701-
+NX1P2-
+NJ501-
+NJ301-
+NJ101-
+Using the built-in Eth-
+erCAT port on an 
+NJ/NX-series CPU 
+Unit.
+Provides information on the built-in EtherCAT 
+port. This manual provides an introduction 
+and information on the configuration, features, 
+and setup.
+NJ/NX-series CPU Unit 
+Built-in EtherNet/IP™ Port 
+User's Manual
+W506
+NX701-
+NX1P2-
+NJ501-
+NJ301-
+NJ101-
+Using the built-in Eth-
+erNet/IP port on an 
+NJ/NX-series CPU 
+Unit.
+Describes information on the built-in Ether-
+Net/IP port.
+Provides information on the basic setup, tag 
+data links, and other features.
+NJ-series Database Connection 
+CPU Unit 
+User’s Manual
+W527
+NJ501-120
+NJ101-20
+Using the database 
+connection service in 
+the NJ series
+Describes the database connection service.
+NJ/NX-series 
+Troubleshooting Manual
+W503
+NX701-
+NX1P2-
+NJ501-
+NJ301-
+NJ101-
+Learning about the 
+errors that may be 
+detected in an 
+NJ/NX-series Con-
+troller.
+Describes concept on managing errors that 
+may be detected in an NJ/NX-series Control-
+ler and information on individual errors.
+Sysmac Studio Version 1 
+Operation Manual
+W504
+SYSMAC
+-SE2
+Learning about the 
+operating proce-
+dures and functions 
+of the Sysmac Studio.
+Describes the operating procedures of the 
+Sysmac Studio.
+19
+  Related Manuals
+CNC Operator Operation Manual (O032)
+NX-Series 
+EtherCAT® Coupler Unit 
+User’s Manual
+W519
+NX-ECC
+Learning how to use 
+the NX-series Ether-
+CAT Coupler Unit and 
+EtherCAT slave ter-
+minals
+Describes system configuration and method 
+to build an EtherCAT slave terminal which 
+consists of NX-series EtherCAT Coupler Unit 
+and NX Units, and information on hardware, 
+functions, and how to setup, control and mon-
+itor the NX Units via the EtherCAT communi-
+cations.
+NY-series IPC Machine Con-
+troller Industrial Panel PC 
+Hardware User’s Manual
+W557
+NY532-1
+Learning the basic 
+specifications of the 
+NY-series Industrial 
+Panel PCs, including 
+introductory informa-
+tion, designing, instal-
+lation, and 
+maintenance. 
+Mainly hardware infor-
+mation is provided.
+An introduction to the entire NY-series system 
+is provided along with the following informa-
+tion on the Industrial Panel PC.
+• Features and system configuration
+• Introduction
+• Part names and functions
+• General specifications
+• Installation and wiring
+• Maintenance and inspection
+NY-series IPC Machine Con-
+troller Industrial Box PC Hard-
+ware User’s Manual
+W556
+NY512-1
+Learning the basic 
+specifications of the 
+NY-series Industrial 
+Box PCs, including 
+introductory informa-
+tion, designing, instal-
+lation, and 
+maintenance. 
+Mainly hardware infor-
+mation is provided.
+An introduction to the entire NY-series system 
+is provided along with the following informa-
+tion on the Industrial Box PC.
+• Features and system configuration
+• Introduction
+• Part names and functions
+• General specifications
+• Installation and wiring
+• Maintenance and inspection
+NY-series IPC Machine Con-
+troller Industrial Panel 
+PC/Industrial Box PC Setup 
+User’s Manual
+W568
+NY532-1
+NY512-1
+Learning the initial set-
+tings of the NY-series 
+Industrial PCs and 
+preparations to use 
+Controllers.
+The following information is provided on an 
+introduction to the entire NY-series system.
+• Two OS systems
+• Initial settings
+• Industrial PC Support Utility
+• NYCompolet
+• Industrial PC API
+• Backup and recovery
+NY-series IPC Machine Con-
+troller Industrial Panel 
+PC/Industrial Box PC Software 
+User’s Manual
+W558
+NY532-1
+NY512-1
+Learning how to pro-
+gram and set up the 
+Controller functions in 
+an NY-series Industrial 
+PC.
+The following information is provided on the 
+NY-series Controller functions.
+• Controller operation
+• Controller features
+• Controller settings
+• Programming based on IEC 61131-3 lan-
+guage specifications
+NY-series 
+Instructions 
+Reference Manual
+W560
+NY532-1
+NY512-1
+Learning detailed 
+specifications on the 
+basic instructions of 
+an NY-series Indus-
+trial PC.
+The instructions in the instruction set 
+(IEC61131-3 specifications) are described.
+NY-series IPC Machine Con-
+troller Industrial Panel 
+PC/Industrial Box PC Motion 
+Control User’s Manual
+W559
+NY532-1
+NY512-1
+Learning about motion 
+control settings and 
+programming con-
+cepts of an NY-series 
+Industrial PC.
+The settings and operation of the Controller 
+and programming concepts for motion control 
+are described.
+NY-series Motion Control 
+Instructions Reference Manual
+W561
+NY532-1
+NY512-1
+Learning about the 
+specifications of the 
+motion control 
+instructions of an 
+NYseries Industrial 
+PC.
+The motion control instructions are described.
+Manual name
+Cat. No.
+Model numbers
+Application
+Description
+   Related Manuals
+20
+CNC Operator Operation Manual (O032)
+ 
+NY-series
+IPC Machine Controller Indus-
+trial Panel PC/Industrial Box 
+PC Built-in EtherCAT® Port 
+User’s Manual
+W562
+NY532-1
+NY512-1
+Using the built-in Eth-
+erCAT port in an 
+NY-series Industrial 
+PC.
+Information on the built-in EtherCAT port is 
+provided. 
+This manual provides an introduction and pro-
+vides information on the configuration, fea-
+tures, and setup.
+NY-series
+IPC Machine Controller Indus-
+trial Panel PC/Industrial Box 
+PC Built-in EtherNet/IP™ Port 
+User’s Manual
+W563
+NY532-1
+NY512-1
+Using the built-in Eth-
+erNet/IP port in an 
+NY-series Industrial 
+PC.
+Information on the built-in EtherNet/IP port is 
+provided. 
+Information is provided on the basic setup, tag 
+data links, and other features.
+NY-Series 
+Troubleshooting 
+Manual
+W564
+NY532-1
+NY512-1
+Learning about the 
+errors that may be 
+detected in an 
+NY-series Industrial 
+PC.
+Concepts on managing errors that may be 
+detected in an NY-series Controller and infor-
+mation on individual errors are described.
+NJ/NY-series NC Integrated 
+Controller User’s Manual
+O030
+NJ501-5300
+NY532-5400
+Learnig how to use 
+the numerical control 
+with NJ/NY series.
+The manucal describes how to setup/use the 
+NC functions. Please read it with Instruction 
+Reference Manual G code (O031) when pro-
+gramming.
+NJ/NY-series G code Instruc-
+tion Reference Manual
+O031
+NJ501-5300
+NY532-5400
+Learning the detailed 
+specification of G 
+Code / M Code.
+The manual describes how to use G code / M 
+code. Please read it with User's manual 
+(O030) when programming.
+CNC Operator Operation Man-
+ual (this manual)
+O032
+SYS-
+MAC-RTNC0D
+Learning how to use 
+CNC Operator.
+The manual describes CNC Operator proce-
+dures for NC Integrated Controller. (Install, 
+functions, connectivity, and so on)
+Sysmac Studio Project Ver-
+sion Control Function Opera-
+tion Manual
+W589
+SYSMAC-SE2
+SYSMAC-TA4
+Learning the over-
+view of the Sysmac 
+Studio project ver-
+sion control function 
+and how to use it.
+The manual outlines the Sysmac Studio proj-
+ect version control function, and describes 
+how to install, basic operation, and how to 
+operate its major functions.
+Manual name
+Cat. No.
+Model numbers
+Application
+Description
+21
+  Revision History
+CNC Operator Operation Manual (O032)
+Revision History
+A manual revision code appears as a suffix to the catalog number on the front and back covers of the 
+manual.
+Revision 
+code
+Date
+Revised content
+01
+October, 2017
+Original production
+O032-E1-01
+Cat. No.
+Revision code
+   Revision History
+22
+CNC Operator Operation Manual (O032)
+1 - 1
+1
+CNC Operator Operation Manual (O032)
+This section describes the product outline and features of CNC Operator.
+ 
+1-1
+What is CNC Operator? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1-2
+CNC Operator Overview
+1   CNC Operator Overview
+1 - 2
+CNC Operator Operation Manual (O032)
+1-1
+What is CNC Operator?
+CNC Operator is a CNC console application that operates and monitors the CNC Controller.
+You can use CNC Operator together with an NJ/NY-series CNC Controller and the Sysmac Studio 
+Automation Software to realize optimum functionality and ease of operation. Features that are fre-
+quently used in CNC machines are provided on the standard screen, which enables you to connect and 
+use the CNC Controller without configuring special settings.
+Also, CNC Operator monitors CNC Controller operations working with the programming tool, Sysmac 
+Studio.
+z Implemented standard screen
+The basic features used for the CNC machine console are provided on the standard screen.
+• NC Program Editor
+• CNC Coordinate System Variable Monitor
+• Various types of basic CNC console functions (Cycle Start, Dry Run, MDI, jog operation, trouble-
+shooting, etc.)
+z Simulation
+The simulation function of the Sysmac Studio enables you to debug programs in an environment in 
+which there is no CNC machine.
+z Customization by the Software Development Kit
+If you use the optional CNC Operator Software Development Kit (SYSMAC-RTNC0101D), desired 
+controls can be created and added to the standard screen features.
+Main Features
+2 - 1
+2
+CNC Operator Operation Manual (O032)
+This section describes the operation flow, software configuration, and screen configura-
+tion of CNC Operator.
+2-1
+Installation  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2-2
+2-1-1
+System requirement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2-2
+2-1-2
+Installation Procedure . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2-2
+2-1-3
+Uninstallation Procedure  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2-3
+2-2
+System Design . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2-4
+2-2-1
+Basic Design Flow  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2-4
+2-2-2
+Outline of System Design . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2-5
+Basic Operations of CNC Operator
+2   Basic Operations of CNC Operator
+2 - 2
+CNC Operator Operation Manual (O032)
+2-1
+Installation
+The hardware to install the software must satisfy the following requirements.
+ 
+1
+If the USB dongle is attached to your computer, disconnect it.
+2
+Start Windows, and insert the installation disk into the DVD-ROM drive. If you use the installer 
+(Web version installer) obtained from the Omron website, start the installation execution file 
+from where the Web version installer is stored.
+The setup program starts automatically and the Select Setup Language dialog box is displayed.
+Additional Information
+If .NET Framework is not installed on the computer, the .NET Framework Installation dialog box 
+is displayed. Follow the instructions to install it.
+When .NET Framework is installed, a confirmation dialog box to restart the computer is dis-
+played. Always click the Yes button to restart the computer. After the computer is restarted, the 
+Setup Wizard will automatically continue to the next step.
+3
+Follow the instructions shown on the screen to install the software.
+2-1-1
+System requirement
+OS
+Microsoft Windows 7 (SP1 or later)/8/8.1/10 32-bit/64-bit
+CPU
+IBM AT or compatible with Intel® Celeron® 540 (1.8 GHz) or higher processor
+Memory
+2GB or more
+Display
+WXGA 1280 × 800 16.77 million colors or more
+HDD*1
+*1. Motion Commander Foundation from Greene & Morehead Engineering is installed as a common framework.
+.NET Framework 4.6 is installed: With 50MB or more free space
+.NET Framework 4.6 is not installed: With 5GB or more free space
+Auxiliary storage 
+device
+At least one DVD-ROM drive
+2-1-2
+Installation Procedure
+2 - 3
+2   Basic Operations of CNC Operator
+CNC Operator Operation Manual (O032)
+2-1  Installation
+2
+2-1-3  Uninstallation Procedure
+1
+If the USB dongle is attached to your computer, disconnect it.
+2
+Open Windows Control Panel *1, and select Add or Remove Programs.
+3
+Select CNC Operator, and run uninstallation.
+*1. The procedure for opening Control Panel differs depending on the operating system.
+Windows 7:
+Select Control Panel from the Start menu.
+Windows 8/8.1:
+Press the Windows key and X key at the same time. From the menu that appears, select 
+Control Panel.
+Windows10:
+Right-click the Start button and select Control Panel.
+2-1-3
+Uninstallation Procedure
+2   Basic Operations of CNC Operator
+2 - 4
+CNC Operator Operation Manual (O032)
+2-2
+System Design
+To use CNC Operator, the system, including the entire system configuration, connections, and settings, 
+must be correctly designed.
+This section describes general system design.
+The following shows the basic design flow.
+2-2-1
+Basic Design Flow
+STEP 1 Determining the system configuration
+Determine the system configuration of the devices (Controller, I/O, and CNC Operator) to be connected 
+according to the target CNC machine.
+STEP 2 Setting the system configuration and transferring it to the Controller
+Create the system configuration designed in STEP 1 using the Sysmac Studio, and transfer the system 
+configuration information to the Controller.
+Start CNC Operator, inheriting system configuration information from Sysmac Studio.
+STEP 3 Programming and debugging
+Create a sequence control program and an NC program.
+Use CNC Operator to edit G codes generated from CAD/CAM software and to transfer it to the Control-
+ler.
+Check the NC program operation, and to edit the NC program and sequence control program. Use the 
+simulation function as necessary.
+STEP 4 Checking the operation on the actual system and running the system
+Download the debugged project from the Sysmac Studio to the Controller.
+Start the operation of the actual CNC machine.
+2 - 5
+2   Basic Operations of CNC Operator
+CNC Operator Operation Manual (O032)
+2-2  System Design
+2
+2-2-2  Outline of System Design
+This section describes an outline of steps provided in 2-2-1 Basic Design Flow on page 2-4.
+z STEP 1 Determining the system configuration
+Determine the system configuration of the devices to be connected according to the target CNC 
+machine. On CNC Operator, determine the screen specifications to be applied to the CNC machine.
+Subsequent steps are the setup procedure to use the standard screen provided by CNC Operator.
+For procedure for constructing the system when the screen specifications are changed, refer to the 
+help manual for CNC Operator Software Development Kit (SYSMAC-RTNC0101D).
+z STEP 2 Setting the system configuration and transferring it to the Controller
+Use Sysmac Studio to configure a project for operating CNC Operator.
+STEP 2-1 Construct a sequence control program to configure an initial project.
+ 
+STEP 2-2 Configure various settings.
+ 
+2-2-2
+Outline of System Design
+Step
+Description
+Reference
+Creating a base project
+Import the sequence control program 
+sample included in the package, and cre-
+ate a base project.*1
+*1. The sequential control program sample is required for CNC Operator to configure CNC Controller parameters, 
+monitor, and issue operating instructions. This program supports all features that CNC Operator handles, and 
+is able to use them without editing.
+NC Integrated Controller Sample 
+Program Manual
+Step
+Description
+Reference
+Setting the CNC coordinate 
+system
+Configure the following settings on the 
+base project:
+• CNC coordinate system settings
+• CNC motor settings
+• CNC coordinate system parameter set-
+tings
+• Spindle motor settings (when required)
+Sysmac Studio Version 1 Operation 
+Manual (Cat. No. W504)
+Setting FTP
+Configure the settings required to commu-
+nicate with CNC Operator.
+• Sysmac Studio Version 1 Operation 
+Manual (Cat. No. W504)
+• Setting the IP Address on page 3-8
+Other settings
+Configure the settings other than the CNC 
+Coordinate System items required to 
+operate the machine.
+• Network Settings
+• Motion axis settings
+• Servo Drive settings and adjustment
+Sysmac Studio Version 1 Operation 
+Manual (Cat. No. W504)
+Transferring the settings
+Transfer the above settings to the Control-
+ler.
+Sysmac Studio Version 1 Operation 
+Manual (Cat. No. W504)
+2   Basic Operations of CNC Operator
+2 - 6
+CNC Operator Operation Manual (O032)
+z STEP 3 Programming and debugging
+STEP 3-1 Use the Sysmac Studio to create a program.
+ 
+STEP 3-2 Use the Sysmac Studio to transfer the program to the Controller.
+ 
+STEP 3-3 Start CNC Operator, and check the settings.
+ 
+STEP 3-4 Use CNC Operator to create and transfer a program.
+ 
+Step
+Description
+Reference
+Creating an NC program 
+and a sequence control pro-
+gram
+Add an NC program on the base project.
+• Adding a sequence control program
+• Programming by the G Code Editor
+• NJ/NY-Series NC Integrated Con-
+troller User’s Manual (Cat. No. 
+O030)
+• NJ/NY-series G code Instruction 
+Reference Manual (Cat. No. O031)
+Program check/build
+Check and build the NC program.
+Sysmac Studio Version 1 Operation 
+Manual (Cat. No. W504)
+Step
+Description
+Reference
+Transferring the program
+Transfer the built program to the Control-
+ler.
+Sysmac Studio Version 1 Operation 
+Manual (Cat. No. W504)
+Step
+Description
+Reference
+Starting CNC Operator
+Start CNC Operator. There are two ways 
+to start Sysmac CNC Operator.
+1. Normal startup
+If the settings described in STEP 2 are 
+already completed, use this normal 
+startup.
+2. Startup by inheriting the CNC setting 
+information from the Sysmac Studio
+Use this method to start CNC Operator for 
+the first time after installing it.
+3-11 Starting from the Sysmac Studio 
+on page 3-56
+Confirming settings
+Open the Machine View and check the 
+CNC Operator operation settings.
+3-3 Features and Settings of CNC 
+Operator on page 3-8
+Step
+Description
+Reference
+Creating and importing an 
+NC program
+Use CAD/CAM software to create a 
+machining program (G code).
+Import (copy) the program to the G Code 
+Editor of CNC Operator.
+Manual for each CAD/CAM software
+3-6 NC Programs on page 3-32
+Transferring the NC pro-
+gram*1
+*1. Setting SYSMAC Gateway is required for communications between CNC Operator and the Controller. Refer 
+to A-2 Setting SYSMAC Gateway, Communications Middleware on page A-3 for details.
+To download the NC program via commu-
+nication, use the Editor View.
+When using an SD Card, copy the pro-
+gram to the SD Card and transfer it to the 
+Controller.
+3-6 NC Programs on page 3-32
+2 - 7
+2   Basic Operations of CNC Operator
+CNC Operator Operation Manual (O032)
+2-2  System Design
+2
+2-2-2  Outline of System Design
+STEP 3-5 Debug the program.
+Two methods are available to debug the NC program: One uses the Sysmac Studio Simulator, and the 
+other connects Sysmac CNC Operator directly to the actual system.
+ 
+Then, use the CNC Operator function to debug the program.
+ 
+z STEP 4 Checking the operation on the actual system and running the system
+After configuring the settings and completing programming and debugging, run the actual operation of 
+the device.
+ 
+Step
+Description
+Reference
+Debugging on the Simulator
+Start the Sysmac Studio, then the Simula-
+tor.
+Set the connection destination of CNC 
+Operator to Simulator.
+Sysmac Studio Version 1 Operation 
+Manual (Cat. No. W504)
+Debugging by connecting 
+the actual system
+Set the connection destination of CNC 
+Operator to the Controller.
+3-3-1 CNC Controller Connection Set-
+tings on page 3-8
+Step
+Description
+Reference
+Executing a test run
+Perform dry run.
+• Block execution
+• Dry run
+• Machine lock
+• Auxiliary function lock
+• Velocity override
+• Spindle operation, stop, and orientation
+3-8 Test Run on page 3-47
+Manual adjustment
+Perform fine adjustment with a manual 
+pulse generator.
+Execute a part of the program with MDI.
+3-7 MDI (Manual Data Input) on page 
+3-37
+3-7-4 Manual Mode on page 3-45
+Step
+Description
+Reference
+Starting the operation
+Execute Cycle Start.
+3-9 Field Operation on page 3-49
+Checking for warnings and 
+errors
+Check the warnings and errors on the 
+Event Viewer and reset them.
+3-10 Troubleshooting on page 3-54
+2   Basic Operations of CNC Operator
+2 - 8
+CNC Operator Operation Manual (O032)
+3 - 1
+3
+CNC Operator Operation Manual (O032)
+This section describes the features of CNC Operator.
+3-1
+Starting and Exiting CNC Operator  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-3
+3-2
+User Interface . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-4
+3-3
+Features and Settings of CNC Operator  . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-8
+3-3-1
+CNC Controller Connection Settings  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-8
+3-3-2
+Axis Settings . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-10
+3-3-3
+Tool Status  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-12
+3-3-4
+NC Program Status . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-12
+3-3-5
+G Codes (Modal Group) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-13
+3-3-6
+Display and Pin Display of Setting Items  . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-14
+3-3-7
+General Application Settings  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-15
+3-3-8
+Message Log  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-25
+3-3-9
+Memo Function . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-25
+3-3-10
+Common Functions  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-25
+3-4
+Function Execution Conditions and Operating Modes  . . . . . . . . . . . . . . 3-26
+3-5
+Tool Offsets/Workpiece Offsets  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-29
+3-5-1
+Tool Offset Management  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-29
+3-5-2
+Work Offset Management . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-30
+3-6
+NC Programs  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-32
+3-6-1
+AUTO  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-32
+3-6-2
+Full Screen Editor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-34
+3-6-3
+NC Subprograms  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-35
+3-6-4
+Queue . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-36
+3-7
+MDI (Manual Data Input)  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-37
+3-7-1
+Switching Modes  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-37
+3-7-2
+Vertical button bar . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-39
+3-7-3
+Soft Control Panel (Velocity Override)  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-43
+3-7-4
+Manual Mode  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-45
+3-8
+Test Run  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-47
+3-8-1
+CNC Motor Compensation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-47
+3-8-2
+Correction of NC Program  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-48
+3-8-3
+Simulation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-48
+Features of CNC Operator
+3   Features of CNC Operator
+3 - 2
+CNC Operator Operation Manual (O032)
+3-9
+Field Operation  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-49
+3-9-1
+Connection with CNC Controller  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .3-49
+3-9-2
+Display of the Running Program and the Path . . . . . . . . . . . . . . . . . . . . . . . .3-49
+3-9-3
+Login User Information . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .3-50
+3-9-4
+Functions to Change Screen Display . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .3-50
+3-9-5
+Alarms  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .3-51
+3-9-6
+Message Status Bar . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .3-51
+3-9-7
+Watchdog Indicator  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .3-51
+3-9-8
+NC Parameter Window  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .3-52
+3-9-9
+Axis Parameter Window . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .3-53
+3-10 Troubleshooting  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-54
+3-10-1
+Event Viewer  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .3-54
+3-10-2
+Back Trace . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .3-55
+3-11 Starting from the Sysmac Studio . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-56
+3 - 3
+3   Features of CNC Operator
+CNC Operator Operation Manual (O032)
+3-1  Starting and Exiting CNC Operator
+3
+3-1
+Starting and Exiting CNC Operator
+1
+Attach the USB dongle to your computer.
+The optional USB dongle (SYSMAC-RTNC0001L) is required to start CNC Operator.
+2
+From the Windows Start menu, select OMRON then CNC Operator to start.
+Precautions for Correct Use
+CNC Operator cannot be started in the Windows Remote Desktop environment.
+Press the Shut down button in the login view.
+Starting CNC Operator
+Exiting CNC Operator
+If you disconnect the USB dongle during operation, CNC Operator stops operating. In the 
+controller program, configure a control circuit to safely stop the system even if CNC Opera-
+tor stops operating. For example, it should execute heartbeat processing between CNC 
+Operator and the controller, and stop the system when the heartbeat is lost. Accidents may 
+occur if the system performs unexpected operations. For the detailed heartbeat configura-
+tion method, refer to A-3 Heartbeat Configuration Example on page A-7.
+WARNING
+3   Features of CNC Operator
+3 - 4
+CNC Operator Operation Manual (O032)
+3-2
+User Interface
+This section describes the screen configuration of CNC Operator.
+CNC Operator has the following views.
+ 
+Use this View to start or exit CNC Operator, and switch between login users.
+ 
+Screen
+Description
+Login View
+This View appears first when CNC Operator starts.
+Machine View
+Use this View to configure the CNC Operator settings.
+Main View
+Use this View to operate CNC.
+Editor
+Use this Editor to edit NC programs.
+Event Viewer
+Displays controller events.
+Login View
+Item
+Description
+User name
+Select a login user.
+For more information on user registration, refer to User Information Settings on 
+page 3-18.
+Password
+Enter the password.
+If the password is not specified, the user cannot enter the password to log in.
+Login
+Click this to log in to CNC Operator.
+Shut down
+Click this to shutdown CNC Operator.
+Full screen
+Click this to switch the view to full screen mode.
+Select language
+Select a language for the user with Administrator rights. The language setting imme-
+diately applies to the user information. Refer to User Information Settings on page 
+3-18 for user information.
+Shutdown
+Select language
+User name
+Password
+Full screen
+Login
+3 - 5
+3   Features of CNC Operator
+CNC Operator Operation Manual (O032)
+3-2  User Interface
+3
+Displays data shared between CNC Operator and the Controller. Features of this View also include 
+those used to record data, control applications, change settings, and view the message log.
+The following table lists available features.
+ 
+Machine View
+Item
+Description
+Controller
+Configures and monitors the Controller currently connected.
+NC File
+Displays the NC program file status.
+Axes
+Displays the Axes settings.
+Tool
+Displays the tool status.
+G-Codes
+Displays G code groups. When you select a G code group, the G code currently run-
+ning is displayed.
+Pins
+Configure pin settings.
+Settings
+Configure the general application settings.
+Message Log
+Displays the message log.
+Notes
+The memo function can be used.
+3   Features of CNC Operator
+3 - 6
+CNC Operator Operation Manual (O032)
+This is the console screen of CNC. This is used to perform basic operations.
+The following shows an outline of the View.
+ 
+Main View
+Description
+A
+Displays the program currently loaded and its path information.
+B
+Soft Control Panel. Operate functions (feedrate, spindle, digital input) in online mode, and confirm Servo 
+ON and homing status.
+C
+Displays the current login user.
+D
+Displays the current time and running time of the NC program.
+E
+Switches show/hide modes of the message log.
+F
+Changes to the full screen display.
+G
+Vertical bar. Use this for operator’s main operations.
+H
+Tab view. Select each view inside.
+I
+Displays or edits the running NC program.
+J
+Horizontal bar. Used to edit the NC program.
+K
+Status bar. Displays various statuses.
+L
+Switches the screen between the stand-alone and embedded mode.
+M
+Enlarges or reduces the displayed target.
+N
+Displays the connection status in an online mode.
+O
+Displays controller events.
+P
+Displays NC parameters.
+Q
+Displays the NC full-screen editor.
+R
+Displays the login view.
+S
+Displays the machine view.
+T
+Displays CNC motor parameters.
+U
+Select the default axis display.
+(G)
+(H)
+(F)
+(E)
+(D)
+(C)
+(M)
+(P)
+(S)
+(N)
+(Q)
+(T)
+(U)
+( 
+I)
+(J)
+(K)
+(L)
+(B)
+(A)
+(R)
+(O)
+3 - 7
+3   Features of CNC Operator
+CNC Operator Operation Manual (O032)
+3-2  User Interface
+3
+Displays the NC Program Editor in full screen mode. Refer to 3-6-2 Full Screen Editor on page 3-34 for 
+details. 
+Displays controller events. Refer to 3-10 Troubleshooting on page 3-54 for details.
+Editor
+Event Viewer
+3   Features of CNC Operator
+3 - 8
+CNC Operator Operation Manual (O032)
+3-3
+Features and Settings of CNC Opera-
+tor
+The Machine View screen enables you to configure the CNC Controller settings. This section describes 
+each setting item.
+Select the Machine View tab, then Controller. On the screen that appears, you can configure the set-
+tings related to CNC Controller connections.
+The items are described in the following table.
+ 
+In IP Address, specify the IP address of the Controller to be connected.
+1
+In the following dialog box, enter the IP address of the Controller to be connected.
+Precautions for Correct Use
+Use Ethernet to connect to the CNC Controller.
+2
+Click the Apply button.
+3-3-1
+CNC Controller Connection Settings
+Item
+Description
+Device Status
+Shows the connection status of the Controller.
+IP Address
+Specifies the IP address of the Controller to be connected.
+Simulated
+Sets the connection of Sysmac Studio to the Simulator.
+FTP Login Name
+Specifies the FTP login user name for the CNC Controller.
+FTP Password
+Specifies the FTP password for the CNC Controller.
+FTP Port Number
+Specifies the FTP TCP/IP port number for the CNC Controller.
+Machine Mode
+Shows the current status of the CNC Controller.
+Setting the IP Address
+3 - 9
+3   Features of CNC Operator
+CNC Operator Operation Manual (O032)
+3-3  Features and Settings of CNC Operator
+3
+3-3-1  CNC Controller Connection Settings
+In Simulated, set whether to connect to the simulation function of Sysmac Studio.
+1
+Switch the connection destination in the setting shown in the following screenshot.
+Select True to switch the destination to the Simulator of Sysmac Studio.
+2
+Start the Sysmac Studio, then the Simulator.
+Refer to the Sysmac Studio Version 1 Operation Manual (Cat. No. W504) for details of Simula-
+tor operation.
+Additional Information
+To establish simulator connection, CNC Operator and Sysmac Studio must be installed in the 
+same PC.
+Sysmac CNC Operator uses an FTP connection to transfer NC programs and correction data to the 
+Controller. To establish an FTP connection, you must set the FTP login user name, FTP password, and 
+FTP port number.
+1
+Enter the FTP login name in the setting shown in the following screenshot.
+2
+Click the Apply button.
+3
+Take the same steps to set the FTP password and the FTP port number.
+Precautions for Correct Use
+When the Simulator is connected, the FTP port number is fixed to 21. The FTP does not run 
+with a port number other than 21.
+Simulated
+FTP Connection
+3   Features of CNC Operator
+3 - 10
+CNC Operator Operation Manual (O032)
+Select the Machine View tab, then Axes. On the screen that appears, check the CNC motor values and 
+configure the display settings.
+The settings are valid when the Controller is connected online.
+The following item can be configured or the following status can be checked.
+ 
+The following values can be checked.
+ 
+3-3-2
+Axis Settings
+Item
+Description
+Display
+Select the position at which the axis is displayed in the initial 
+status.
+Item
+Description
+CS*1 Program Position n
+*1. Coordinate system number n: Indicates the axis number (n = 1 to 6).
+     The number and axis name are combined as follows.
+     1: X axis, 2: Y axis, 3: Z axis, 4: A axis, 5: B axis, 6: C axis
+Program position of the n-th axis
+CS*1 Commanded Position n
+Commanded position of the n-th axis
+CS*1 Machine Position n
+Machine position of the n-th axis
+CS*1 Relative Position n
+Relative position of the n-th axis
+CS*1 Distance To Go n
+Remaining travel distance of the n-th axis
+CS*1 Following Error n
+Following Error value of the n-th axis
+CS*1 Torque n
+Torque value of the n-th axis
+CS*1 Cmd Feedrate
+Command feedrate of the n-th axis
+CS*1 Act Feedrate
+Actual feedrate of the n-th axis
+CS*1 Homed n
+Homed state of the n-th axis
+CS*1 Servo On n
+SERVO ON state of the n-th axis
+CS*1 Servo On Spindle
+Spindle axis servo on state
+Feedrate Override
+Override factor of feedrate
+3 - 11
+3   Features of CNC Operator
+CNC Operator Operation Manual (O032)
+3-3  Features and Settings of CNC Operator
+3
+3-3-2  Axis Settings
+In Display, select the position at which the axis will be displayed in the initial status.
+ 
+Display Setting
+Item
+Description
+Program Position
+Sets the initial status to the Program Position.
+Relative Position
+Sets the initial status to the Relative Position.
+Machine Position
+Sets the initial status to the Machine Position.
+Commanded Position
+Sets the initial status to the Commanded Position.
+3   Features of CNC Operator
+3 - 12
+CNC Operator Operation Manual (O032)
+Select the Machine View tab, then Tool. On the screen that appears, view the tool status.
+The following list shows the statuses that can be confirmed.
+ 
+Select the Machine View tab, then NC File. On the screen that appears, view the NC program status.
+The following list shows the statuses that can be confirmed.
+ 
+3-3-3
+Tool Status
+Item
+Description
+CS*1 Cmd Spindle
+*1. Indicates the coordinate system number.
+Commanded speed value of the spindle assigned to the target coordinate 
+system
+CS*1 Act Spindle
+Resultant speed value of the spindle assigned to the target coordinate sys-
+tem
+Spindle Override
+Override rate of the spindle assigned to the target coordinate system
+3-3-4
+NC Program Status
+Item
+Description
+Executing Status
+Executing status of the NC program
+Current Line
+Line of the NC program currently executed
+Elapsed time1
+Execution time period of the NC program, including feed hold time
+Elapsed time2
+Execution time period of the NC program, excluding feed hold time
+3 - 13
+3   Features of CNC Operator
+CNC Operator Operation Manual (O032)
+3-3  Features and Settings of CNC Operator
+3
+3-3-5  G Codes (Modal Group)
+Select the Machine View tab, then G-Codes. On the screen that appears, view the G code groups to 
+be executed in modal mode.
+Example: List of G codes displayed when Motion Group is selected.
+When you select a G code group, G codes currently executed in the group are displayed in the View.
+ 
+3-3-5
+G Codes (Modal Group)
+Item
+Description
+Motion Group
+0:G00/1:G01/2:G02/3:G03
+Path Control Group
+0:G61/1:G64
+Plane Group
+0:G17/1:G18/2:G19
+Unit Group
+0:G20/1:G21
+Coordinate System Group
+(G54 to G59 disabled)
+Distance Group
+0:G90/1:G91
+Tool Radius Group
+0:G40/1:G41/2:G42
+Tool Length Offset Group
+0:G43/1:G44/2:G49
+Scaling Group
+0:G50/1:G51
+Mirroring Group
+0:G50.1/1:G51.1
+Rotation Group
+0:G68/1:G69
+Return Level Group
+0:G98/1:G99
+Multi Block Acceleration Group
+0:G500/1:G501
+3   Features of CNC Operator
+3 - 14
+CNC Operator Operation Manual (O032)
+The Machine View provides a pin function that is capable of displaying only necessary items. This 
+enables you to conveniently select and display frequently-used functions or settings.
+1
+Select an item to be pinned from the tree view of the Machine View.
+2
+Press the pin icon at the bottom of the screen.
+Select a pin icon from red, green, and blue icons.
+Additional Information
+The item for which the red pin is selected is displayed at the top of the Controller, G-Codes, 
+Axis, Tool, or NC File screen.
+1
+Select Pins from the tree view of the Machine View.
+2
+Select the pin color of the pinned items.
+z Releasing pins
+On the screen displayed by selecting the pin color from Pins, select an item. Press the pin icon at 
+the bottom of the screen. The pin is released.
+3-3-6
+Display and Pin Display of Setting Items
+Selecting Items to be Pinned
+Displaying Pinned Items
+3 - 15
+3   Features of CNC Operator
+CNC Operator Operation Manual (O032)
+3-3  Features and Settings of CNC Operator
+3
+3-3-7  General Application Settings
+Select the Machine View tab, then Settings. On the screen that appears, configure the settings related 
+to general features of the application.
+The settings are listed in the following table.
+ 
+3-3-7
+General Application Settings
+Item
+Description
+Start Up
+Behavior at Start-up
+Shut Down
+Behavior when the application is exited
+Update Interval
+Update interval of data
+Users
+User information settings
+Always On Top
+Always displayed in the foreground
+Message Log Size
+Log size
+Operator Permissions
+Showing or hiding the operation screen
+Editor Size Limit
+Maximum data size of NC program editor
+Editor Font Size
+Font used for the NC Program Editor
+Native Length Units
+Length units
+Native Length Decimal Places
+Setting the number of decimal places
+Velocity Time Units
+Velocity units
+Jog Speed1
+Velocity in job setting 1 (Unit: Native length units/min.)
+Jog Speed2
+Velocity in job setting 2 (Unit: Native length units/min.)
+Jog Speed3
+Velocity in job setting 3 (Unit: Native length units/min.)
+Jog Speed4
+Velocity in job setting 4 (Unit: Native length units/min.)
+Jog Speed5
+Velocity in job setting 5 (Unit: Native length units/min.)
+Mpg Distance1
+Travel distance at Mpg setting 1 (in CS Unit/100 pulses)
+Mpg Distance2
+Travel distance at Mpg setting 2 (in CS Unit/100 pulses)
+Mpg Distance3
+Travel distance at Mpg setting 3 (in CS Unit/100 pulses)
+Mpg Distance4
+Travel distance at Mpg setting 4 (in CS Unit/100 pulses)
+Mpg Distance5
+Travel distance at Mpg setting 5 (in CS Unit/100 pulses)
+Short Timeout
+Timeout time for initialization, reset, and abort
+Long Timeout
+Timeout time for homing
+Machine View Tabs
+Changing Machine View display options
+3   Features of CNC Operator
+3 - 16
+CNC Operator Operation Manual (O032)
+Additional Information
+The following initial settings are specified in the CNCOperator.ini file. The file is automatically 
+loaded when CNC Operator starts, and is reflected on the settings.
+ 
+Section
+Key
+Value
+Remarks
+Machine Con-
+structor
+UsedAxes
+Axis name (e.g., X)
+Describe the desired axis name.
+UsedAxesCS*
+(*: 0 to 7)
+Axis name for each CS (e.g., X)
+Describe the desired axis name for 
+each CS.
+MotorNumbers
+CNC motor number (e.g., 1)
+Describe the desired motor num-
+bers by delimiting them with com-
+mas (,).
+MotorNumbersCS*
+(*: 0 to 7)
+CNC motor number for each CS 
+(e.g., 1)
+Describe the desired CNC motor 
+numbers for each CS by delimiting 
+them with commas (,).
+SpindleMotorNumber
+Spindle motor number
+(e.g., 1)
+Describe the desired spindle motor 
+number.
+SpindleMotorNumberCS*
+(*: 0 to 7)
+Spindle motor number for each CS 
+(e.g., 1)
+Describe the desired spindle motor 
+number for each CS.
+CoordinateSystem
+Number of the coordinate system 
+used for read and write (e.g., 0)
+Describe the desired coordinate 
+system number.
+CoordinateSystems
+Numbers of the coordinate systems 
+used
+(e.g., 0,1,2,3)
+ToolOffsets
+Number of tool offsets
+Describe the desired number of 
+tool offsets.
+Pitch Compensa-
+tion
+CompTableNumbers
+Compensation table number
+(e.g., 1,2)
+Describe the desired compensation 
+table information.
+CompTableVariables
+Variable name registered for the 
+compensation table
+(e.g., CNC_Comp_Tabl001)
+NC Files
+MainProgramNumber
+Number of the first main NC pro-
+gram
+−
+MdiProgramNumber
+Default NC program number used 
+for MDI
+−
+SubprogramFolder
+Default folder name on the PC that 
+stores subprograms
+−
+VolatileSubprogramMin
+The minimum value of the subpro-
+gram numbers to be transferred via 
+CNC Operator
+−
+VolatileSubprogramMax
+The maximum value of the subpro-
+gram numbers to be transferred via 
+CNC Operator
+−
+NonVolatileProgramIds
+Number of the sub program trans-
+ferred to the controller by Sysmac 
+Studio (Example: 1000, 1001)
+−
+Parser Options
+CustomMCodes
+Available M codes (e.g., 2,3,4)
+Describe the M code number used 
+in the NC program. If omitted, an 
+error occurs in the sub program 
+calling part when the main program 
+is parsed.
+3 - 17
+3   Features of CNC Operator
+CNC Operator Operation Manual (O032)
+3-3  Features and Settings of CNC Operator
+3
+3-3-7  General Application Settings
+In Start Up, specify a behavior to be performed when the application starts. The selected behavior is 
+enabled from the time of the next start-up.
+ 
+In Shut Down, specify the shutdown operation mode of the application. This setting is applied the next 
+time the application is started.
+ 
+Behavior at Start-up
+Item
+Description
+Do Nothing
+Only starts the application.
+Go Online and Run at Start-Up
+After start-up, the application is connected to the CNC Controller 
+online, and the login view is displayed.
+Go Online and Run at Login
+At login, the application is connected to the CNC Controller online.
+Behavior When the Application Is Exited
+Item
+Description
+Immediate
+Exits the application immediately without displaying the confirmation dialog.
+Verify Dialog Box
+Displays the confirmation dialog. Select Yes to exit the application, or No to 
+cancel the shutdown procedure.
+Technician Required
+Prohibits shutdown of the application by a user with Operator rights. Rights 
+higher than the Technician or Administrator rights are required to exit the 
+application. If you have Operator rights and try to exit the application, a warn-
+ing message appears and you cannot exit the application.
+3   Features of CNC Operator
+3 - 18
+CNC Operator Operation Manual (O032)
+In Update Interval, specify the update interval of data (in msec) for the machine.
+The available setting range is 50 to 2000. The default value is 500.
+In Users, specify the login user name and access rights.
+ 
+Additional Information
+• Language settings configured in the start page are reflected on the above user information.
+• The changed language setting is not updated while the user is logged in. The setting is 
+updated when the user logs in again after the user was logged out from the main view.
+• To delete a registered user, locate the cursor to the target user, and press the delete key.
+Update Interval of Data
+User Information Settings
+Item
+Description
+Name
+Login user name
+Language
+Language settings. The display language can be switched depending 
+on the user.
+Level
+Access level. Operator, Technician, or Administrator can be 
+selected.
+Password
+Password. Enter it to log in.
+Note that the text entered as the password is not masked.
+Hint
+Hint for the password. Displayed when an incorrect password is 
+entered on the login screen.
+3 - 19
+3   Features of CNC Operator
+CNC Operator Operation Manual (O032)
+3-3  Features and Settings of CNC Operator
+3
+3-3-7  General Application Settings
+In Always On Top, specify whether to always display the application in the foreground. Press the but-
+ton to enable or disable this function.
+In Message Log Size, specify the maximum size of the message log file (In KB).
+Enter the maximum size in the setting shown in the following screenshot.
+In Machine View Tabs, change the tab display mode.
+ 
+Setting of Display in Foreground
+Message Log Size Setting
+Tab Display Settings
+Item
+Description
+Fat Tabs
+Displays tabs thicker.
+Horizontal Tabs
+Display tabs horizontally.
+Always Visible
+Displays tabs when a user other than Administrator logs in.
+3   Features of CNC Operator
+3 - 20
+CNC Operator Operation Manual (O032)
+In Operator Permissions, select functions that users having the Operator rights are allowed to operate.
+ 
+Operation Screen Display Settings
+Item
+Description
+Edit and Save NC Files
+Editing and saving NC program files
+Queue NC Files
+Queuing NC program files
+MDI Mode
+Switching to MDI mode
+Manual Mode
+Switching to manual mode
+View Work Offsets
+Viewing work offsets
+Edit Work Offsets
+Editing work offsets
+View Tool Offsets
+Viewing tool offsets
+Edit Tool Offsets
+Editing tool offsets
+View Pitch Compensation
+Viewing the CNC compensation table
+Edit Pitch Compensation
+Editing the CNC compensation table
+Reset Errors
+Executing error reset
+All
+All the above functions are made available.
+3 - 21
+3   Features of CNC Operator
+CNC Operator Operation Manual (O032)
+3-3  Features and Settings of CNC Operator
+3
+3-3-7  General Application Settings
+In Editor Size Limit, specify the maximum size of NC program files that can be loaded to the editor (In 
+MB).
+Enter the maximum size in the setting shown in the following screenshot. The minimum value is 1MB, 
+and the maximum is 45MB.
+Additional Information
+• For the program size available for the controller, refer to the NJ/NY-Series NC Integrated 
+Controller User’s Manual (Cat. No. O030).
+• After the NC program was parsed, the actually transferred file size is displayed at the top of 
+the PARSE window of the full-screen editor. Transfer the file based on the displayed file size.
+In Native Length Units, specify the unit of length to be displayed. Select the unit in the setting shown in 
+the following screenshot.
+Setting for NC Program Size
+Unit Setting
+3   Features of CNC Operator
+3 - 22
+CNC Operator Operation Manual (O032)
+In Native Length Decimal Places, specify the number of decimal places to be displayed. Enter a num-
+ber in the setting shown in the following screenshot. A number between 0 and 6 can be set.
+In Velocity Time Units, specify the unit of velocity to be displayed. Enter the unit in the setting shown in 
+the following screenshot.
+In Jog Speed1 to Jog Speed5, specify the velocities to be assigned to Jog X1 to X5.
+E.g., Setting displayed when Jog Speed1 is selected.
+Setting the Number of Decimal Places
+Setting the Velocity Unit
+Jog Velocity Settings
+3 - 23
+3   Features of CNC Operator
+CNC Operator Operation Manual (O032)
+3-3  Features and Settings of CNC Operator
+3
+3-3-7  General Application Settings
+In Mpg Distance, set the travel distance (in Unit/100 pulse) when MPG is used. Enter the value in the 
+following text box to set the distance.
+In Short Timeout, set the timeout for the following functions. It is set to 5 by default (In seconds).
+• Changing operating modes
+• Reset
+• Error reset
+• All the functions placed on the vertical button bar (e.g., Cycle Start)
+Enter the time in the setting shown in the following screenshot.
+MPG Distance Setting
+Short Timeout Setting
+3   Features of CNC Operator
+3 - 24
+CNC Operator Operation Manual (O032)
+In Long Timeout, set the timeout for the following functions that take time for processing. It is set to 60 
+by default (In seconds).
+• Initializing the Controller
+• Incremental jog
+• Downloading CNC motor compensation table
+• Downloading tool offset
+• Downloading work offset
+• Orientation of spindle axis
+Enter the time in the setting shown in the following screenshot.
+Long Timeout Setting
+3 - 25
+3   Features of CNC Operator
+CNC Operator Operation Manual (O032)
+3-3  Features and Settings of CNC Operator
+3
+3-3-8  Message Log
+Message Log displays login information and history such as changed settings.
+The denotations of the icons are shown in the following table.
+ 
+Notes is a memo function. A text editor starts when Notes is selected. The text you enter will be saved 
+automatically. Tabs can be added and deleted.
+The data is saved in rich text format (rtf) and stored in the installation folder of CNC Operator.
+In the Machine View, common functions that record operation logs and display the history of program 
+applications are provided.
+The following table shows the list of common functions.
+ 
+3-3-8
+Message Log
+Icon
+Description
+Time stamp display is enabled
+Time stamp display is disabled
+3-3-9
+Memo Function
+3-3-10 Common Functions
+Icon
+Name
+Description
+Log Values
+Press this icon to enable or disable the operation log.
+Value History
+Press this icon to display the history of application of programs.
+With the Timestamp button, you can exchange the display order.
+(Example: 2016-05-16-15:10.10)
+3   Features of CNC Operator
+3 - 26
+CNC Operator Operation Manual (O032)
+3-4
+Function Execution Conditions and 
+Operating Modes
+This section describes executable statuses (enable and disable) of various functions, and operating 
+modes of CNC Operator.
+Statuses (enable and disable) of various functions depends on the online status of CNC Operator and 
+executing status of the NC program.
+z When CNC Operator is offline
+ 
+Yes: Enabled, No: Disabled
+Function Execution Conditions
+Condition
+While NC program stops
+While NC program is executed
+Home unde-
+fined
+Home defined
+Feed hold OFF
+Feed hold ON
+Vertical button bar
+Operating mode
+(AUTO, MDI, MAN-
+UAL)
+No
+CYCLE START
+No
+FEED HOLD
+No
+RESET
+No
+SINGLE BLOCK
+No
+BLOCK SKIP
+No
+OPTION STOP
+No
+DRY RUN
+No
+MACHINE LOCK
+No
+AUX LOCK
+No
+LOG OUT
+Yes
+Soft control panel
+FEEDRATE
+No
+SPINDLE
+No
+DIGITAL INPUT
+No
+AUTO
+LOAD NC FILE
+Yes
+FIND REPLACE
+Yes
+GOTO LINE
+Yes
+SAVE
+Yes
+EDITOR
+Yes
+Queue
+Various operations
+Yes
+MDI
+Edit operation
+No
+Manual
+JOG
+No
+JOG INCREMEN-
+TAL
+No
+HOME
+No
+SPINDLE MOVE
+No
+Editor
+DOWNLOAD
+No
+3 - 27
+3   Features of CNC Operator
+CNC Operator Operation Manual (O032)
+3-4  Function Execution Conditions and Operating
+Modes
+3
+z When CNC Operator is online
+ 
+Yes: Enabled, No: Disabled
+ 
+Condition
+While NC program stops
+While NC program is executed
+Home unde-
+fined
+Home defined
+Feed hold OFF
+Feed hold ON
+Vertical button bar
+Operating mode
+(AUTO, MDI, MAN-
+UAL)
+Yes
+Yes
+No
+No
+CYCLE START
+Yes
+Yes
+No
+Yes
+FEED HOLD
+No
+No
+Yes
+Flashing
+RESET
+No
+No
+Yes
+Yes
+SINGLE BLOCK
+Yes
+Yes
+No
+No
+BLOCK SKIP
+Yes
+Yes
+No
+No
+OPTION STOP
+Yes
+Yes
+Yes
+Yes
+DRY RUN
+Yes
+Yes
+No
+No
+MACHINE LOCK
+Yes
+Yes
+No
+No
+AUX LOCK
+Yes
+Yes
+No
+No
+LOG OUT
+No
+No
+No
+Yes
+Soft control panel
+FEEDRATE
+Yes
+Yes
+Yes
+Yes
+SPINDLE
+Yes
+Yes
+Yes
+Yes
+DIGITAL INPUT
+Yes
+Yes
+Yes
+Yes
+AUTO
+LOAD NC FILE
+Yes
+Yes
+Yes
+Yes
+FIND REPLACE
+Yes
+Yes
+No
+No
+GOTO LINE
+Yes
+Yes
+No
+Yes (Search 
+only)
+SAVE
+Yes
+Yes
+Yes
+Yes
+EDITOR
+Yes
+Yes
+No
+No
+Queue
+Various operations
+Yes
+Yes
+No
+No
+MDI
+Edit operation
+Yes
+Yes
+Yes
+Yes
+Manual
+JOG
+Yes
+Yes
+Yes
+Yes
+JOG INCREMEN-
+TAL
+Yes
+Yes
+No
+Yes
+HOME
+Yes
+Yes
+No
+No
+SPINDLE MOVE
+Yes
+Yes
+No
+No
+Editor
+DOWNLOAD
+Yes
+Yes
+No
+Yes
+3   Features of CNC Operator
+3 - 28
+CNC Operator Operation Manual (O032)
+Operating mode is displayed at the top button on the vertical button bar.
+ 
+z Displaying operating mode
+Operating mode is displayed at the top button on the vertical button bar.
+z Switching operating modes
+Procedures for switching operating modes of CNC Operator are as follows:
+• Switching modes by the operating mode view button
+By pressing the top button on the vertical button bar, operating modes are changed in the order of 
+AUTO, MDI, Manual, Edit, AUTO, ... in cycles.
+• Switching modes by Tab View
+By pressing each function in the Tab View, the operating mode can be changed directly into the 
+selected mode.
+Additional Information
+From tab view, the mode cannot be changed to edit mode. When Work offset, Tool offset, or 
+CNC compensation table is selected, press the operating mode view button to change to edit 
+mode.
+Operating Mode
+Operating mode
+Description
+AUTO
+Mode where AUTO is performed
+MDI
+Mode where MDI is preformed
+Manual
+Mode where manual operation (jog, MPG) is performed
+Edit
+Mode where work offset, tool offset, or CNC compensation table is 
+edited
+3 - 29
+3   Features of CNC Operator
+CNC Operator Operation Manual (O032)
+3-5  Tool Offsets/Workpiece Offsets
+3
+3-5-1  Tool Offset Management
+3-5
+Tool Offsets/Workpiece Offsets
+This section describes the tool offset and workpiece offset settings.
+In Tool Offsets, manage data such as tool offsets and operating time.
+The device vendor changes or expands the settings in accordance with the connected machine using 
+the sequence control program.
+The following table lists the tool data items that are displayed.
+ 
+z Screen image
+z Editing data
+1
+Select Main View then Tool Offsets to display the screen.
+Precautions for Correct Use
+The numeric value can only be changed in edit mode. Press the operating mode change button 
+to change to edit mode.
+2
+Select the cell of the item to be changed, and enter a value.
+z Exporting data
+1
+Press the EXPORT button.
+2
+Select the save location and press the SAVE button.
+The file is save in CSV (comma separated value) format.
+3-5-1
+Tool Offset Management
+Tool Data
+Description
+Tool Length
+Length of tool (writable)
+Tool Wear
+Wear of tool (read only)
+Tool Radius
+Tool Radius (writable)
+Radius Wear
+Radius Wear (read only)
+Usage Count
+Count of tool usage (read only)
+Operating Time
+Operating time of tool (read only)
+3   Features of CNC Operator
+3 - 30
+CNC Operator Operation Manual (O032)
+z Importing data
+1
+Press the IMPORT button.
+2
+Select a file to import, and press the OPEN button.
+Additional Information
+Only Tool Length and Tool Radius are targeted for import.
+z Downloading data
+Press the DOWNLOAD button. Data is downloaded to the Controller.
+z Uploading data
+Press the UPDATE button. The data stored in the Controller is reflected on CNC Operator.
+z Deleting data
+Click the CLEAR button. Among data of the selected line, the controller data (Tool Wear, Radius 
+Wear, Usage Count, and Operating Time) are deleted.
+Tool Length and Tool Radius that were entered on CNC Operator are not deleted.
+In Work Offsets, manage workpiece offset information.
+Change or expand the settings in accordance with the connected machine.
+Refer to the NJ/NY-series G code Instruction Reference Manual (Cat. No. O031) for details.
+ 
+z Screen image
+3-5-2
+Work Offset Management
+Compatible G codes
+Description
+G54 to G59
+Set the work offset values of coordinate systems 1 to 6.
+3 - 31
+3   Features of CNC Operator
+CNC Operator Operation Manual (O032)
+3-5  Tool Offsets/Workpiece Offsets
+3
+3-5-2  Work Offset Management
+z Editing data
+1
+Select Main View then Work Offsets tab to display the screen.
+Precautions for Correct Use
+The numeric value can only be changed in edit mode. Press the operating mode change button 
+to change to edit mode.
+2
+Select the cell of the item to be changed, and enter a value.
+z Exporting data
+1
+Press the EXPORT button.
+2
+Select the save location and press the SAVE button.
+The file is save in CSV (comma separated value) format.
+z Importing data
+1
+Press the IMPORT button.
+2
+Select a file to import, and press the OPEN button.
+z Downloading data
+Press the DOWNLOAD button. Data is downloaded to the Controller.
+z Uploading data
+Uploading all data
+Press the UPDATE button. The data stored in the Controller is reflected on CNC Operator.
+Uploading data for each axis
+Upload controller data for each axis. Take the following steps to upload.
+(1) Select the target data (coordinate system).
+(2) Select the axis (X, Y, Z) to upload by the button. The target data is uploaded to the table.
+3   Features of CNC Operator
+3 - 32
+CNC Operator Operation Manual (O032)
+3-6
+NC Programs
+NC programs can be generated in CAD/CAM and displayed on the AUTO tab or full screen editor. NC 
+programs can be created, edited, and monitored.
+The G Code Editor on the AUTO tab can create new NC programs, as well as load, edit, and monitor 
+NC programs.
+The NC program editor can edit and monitor G codes.
+ 
+3-6-1
+AUTO
+Function
+Description
+Edit
+Edits NC programs.
+• The lines of an NC program are shown in different colors depending on 
+whether they are G codes, M codes, parameters, or comments.
+• A number is automatically assigned to the head of each line of the NC 
+program transferred to the Controller. These numbers are used by the 
+program to show the lines.
+G code monitoring
+Monitors the execution of the NC program. The status bar indicates the 
+progress. The current line is highlighted, and the executed line is dis-
+played in light blue. You cannot edit the NC program when it is monitored.
+• The progress of the main program is indicated by line number/total line 
+(progress %).
+• The number of a program and a line currently executed are indicated by 
+PROG:LINE program number:line number.
+Program status
+Cursor position
+Automatic 
+assignment 
+of line 
+numbers
+Editor with color-coding 
+display feature
+3 - 33
+3   Features of CNC Operator
+CNC Operator Operation Manual (O032)
+3-6  NC Programs
+3
+3-6-1  AUTO
+The NC program editor has the following functions.
+ 
+The following table shows the specifications of NC programs that can be used.
+ 
+Function
+Description
+A
+Loading NC File
+Loading an NC file.
+B
+Search and replace
+Searching for and replacing the text.
+C
+Go to the Specified Line
+D
+Save
+Grayed out when no change is made.
+E
+Full Screen Editor
+The editor transitions to a full screen editor. If you attempt to transit to 
+the editor without saving the data, a confirmation dialog appears 
+prompting you to save the data.
+Specification
+Details
+NC file size
+The default file size is 5MB. The transferable maximum size varies depend-
+ing on the target controller.
+Refer to Setting for NC Program Size on page 3-21.
+G code, M code
+Supported in the CNC controller version.
+(A)
+(B)
+(C)
+(D)
+(E)
+3   Features of CNC Operator
+3 - 34
+CNC Operator Operation Manual (O032)
+The following shows the GUI of the full screen editor.
+ 
+Precautions for Correct Use
+• When an NC program is analyzed, the NC program currently open is saved automatically.
+• NC programs to be analyzed are only the main program and NC subprograms that are refer-
+enced by the M98 command in the main program.
+• If a subprogram is referenced in the main program, a tab for viewing the subprogram is auto-
+matically added after the NC program analysis, and the target subprogram is displayed.
+3-6-2
+Full Screen Editor
+Function
+Description
+NEW
+Creates a new file to store the NC program.
+OPEN
+Opens a file to store the NC program.
+SAVE
+Saves a file to store the NC program.
+SAVE-AS
+Saves a file to store the NC program after assigning a name to it.
+CUT
+Cuts an area in the editor.
+COPY
+Copies data in the editor.
+PASTE
+Pastes data in the editor.
+UNDO
+Cancels the previous edit operation and returns to the unedited state.
+REDO
+Re-executes the canceled edit operation.
+FIND
+Searches text in the editor.
+PARSE
+Checks the NC program. When the syntactic analysis is completed, 
+the syntactic analysis results are shown in the pane on the right.
+DOWNLOAD
+Downloads the NC program to the Controller. However, when the 
+Controller is executing another NC program, the download process 
+does not start.
+FINISHED
+Exits and returns to the Main View.
+Download when Selected
+If enabled, the program is downloaded when the editor is closed.
+Syntactic analysis view 
+Automatic subprogram view
+Syntactic analysis result output view
+Reload
+Standard 
+edit tool  
+Syntactic analysis 
+of NC program
+NC program 
+download
+3 - 35
+3   Features of CNC Operator
+CNC Operator Operation Manual (O032)
+3-6  NC Programs
+3
+3-6-3  NC Subprograms
+CNC Operator handles NC subprograms in the following way.
+• Each NC subprogram must be saved in one file. Specify the program number by adding "o" to the top 
+line of the subprogram.
+• Specify program numbers 3000 to 9999 for NC subprograms handled by CNC Operator. Other num-
+bers cause an error during the parse process.
+• The default location (folder) of NC subprograms is as follows:
+ <Name of the HDD with Windows installed>:\OMRON\NC
+The location can be changed by editing the SubProgramFolder entry in the NC Files section of the 
+CNCOperator.ini file.
+• NC subprogram files have .nc extension.
+The saved subprogram is added to the main program by specifying the program number with the M98 
+command and parsing the program in the NC program (main program). For details on the M98 com-
+mand, refer to the NJ/NY-series G code Instruction Reference Manual (Cat. No. O031).
+Example: Specifying an NC subprogram that was saved with NC subprogram number 3000 from the 
+main program
+• NC program (main program)
+M98 p3000
+M30
+• NC Subprograms
+o3000
+G1 X100 Y100
+M99
+Precautions for Correct Use
+An NC subprogram can be parsed by the G code editor after it is invoked to and assigned with 
+the main program with the M98 command. NC subprograms that are not invoked from the main 
+program cannot be parsed.
+In the same way, the NC subprogram transferred directly from Sysmac Studio to the controller 
+is also untargeted for parse processing.
+Only NC subprograms that can be invoked from the NC program (main program) can be edited after 
+verification is conducted.
+1
+Save the NC subprogram to be invoked to the NC subprogram folder.
+2
+Add the code (M98) used to invoke the NC subprogram from the main program, and parse the 
+subprogram in the full screen editor.
+3-6-3
+NC Subprograms
+Preparing NC Subprograms
+Invoking and Executing NC Subprograms
+Editing NC Subprograms
+3   Features of CNC Operator
+3 - 36
+CNC Operator Operation Manual (O032)
+3
+The target subprogram is automatically added to the full screen editor as a new tab. (Automatic 
+subprogram view)
+4
+Edit the added NC subprogram and save it.
+Precautions for Correct Use
+You cannot create New NC subprograms on CNC Operator. Use NC subprograms previously 
+prepared, or use external text editor to create NC subprograms.
+NC programs are transferred to the Controller one by one. To execute multiple files in series, you can 
+use the Queue tab to specify the order.
+The following functions are available on the Queue tab.
+ 
+3-6-4
+Queue
+Function
+Remarks
+Adding an NC program to the queue
+---
+Raising the priority of an item in the 
+queue
+---
+Lowering the priority of an item in the 
+queue
+---
+Deleting an NC program file from the 
+queue
+This does not delete the file itself.
+Deleting all NC program files from the 
+queue
+This does not delete the files themselves.
+3 - 37
+3   Features of CNC Operator
+CNC Operator Operation Manual (O032)
+3-7  MDI (Manual Data Input)
+3
+3-7-1  Switching Modes
+3-7
+MDI (Manual Data Input)
+MDI is used to partially check CNC functions.
+MDI has the following functions.
+ 
+The vertical button bar provides the button to change to the MDI mode.
+z Screen image
+The MDI tab allows you to create, edit, and monitor NC programs. Unlike the AUTO tab, this tab does 
+not support loading of programs one by one.
+The NC Program Editor has two areas: the editing area and the monitoring area.
+ 
+Function name
+Description
+Switching Modes
+Switches the mode to MDI to enable the MDI tab.
+MDI Tab Editor
+Enters, edits, or monitors the NC program to be partially operated.
+Cycle Start
+Executes the NC program.
+Block Execution
+Only executes a part of the NC program.
+Dry Run
+Runs the machine at the feedrate specified by a parameter instead of the feedrate 
+commanded by the NC program without placing workpieces. This function is used to 
+check the program.
+Machine Lock
+Checks the operation of the NC program without running the machine. When 
+machine lock is enabled, all target axes are temporarily operated as virtual axes. 
+However, the S-axis will not be affected.
+Aux Lock
+This is an auxiliary function of dry run and machine lock. It works so as not to run M 
+and the spindle S-axis.
+Feedrate Override
+Checks the operation using rapid and slow feedrate. Set Override for each of the 
+feedrate (Feed ((X,Y,Z,A,B,C)) and spindle S velocity (Spindle).
+3-7-1
+Switching Modes
+MDI Tab
+Area
+Description
+Editing area
+Edits NC programs.
+The following operations are available in the editing area.
+• Shows NC codes in different colors according to the code type (G, M, parameter, 
+comment, etc.).
+• A number is automatically assigned to the head of each line of the NC program 
+transferred to the Controller. These numbers are used by the program to show the 
+lines.
+Monitoring area
+Monitors the execution of the NC program. The status bar indicates the progress. 
+The current line is highlighted, and lines that have been executed are shown in a 
+light color. You cannot edit the NC program when it is monitored.
+3   Features of CNC Operator
+3 - 38
+CNC Operator Operation Manual (O032)
+The sizes of those two areas can be adjusted.
+Split display view
+Indicator 
+showing the 
+current line
+Vertical height can be adjusted.
+NC program progress indicator 
+3 - 39
+3   Features of CNC Operator
+CNC Operator Operation Manual (O032)
+3-7  MDI (Manual Data Input)
+3
+3-7-2  Vertical button bar
+You can operate the connected CNC machine from the vertical button bar.
+The Cycle Start button starts the NC program. In MDI mode, the NC program on the MDI tab is exe-
+cuted.
+z Screen image
+The Feed Hold button stops the running NC program. To restart, press the Cycle Start button again.
+z Screen image
+The Reset button stops the currently running NC program. The program number that is operating is ini-
+tialized.
+z Screen image
+3-7-2
+Vertical button bar
+Cycle Start
+FEED HOLD
+RESET
+3   Features of CNC Operator
+3 - 40
+CNC Operator Operation Manual (O032)
+This function allows you to select a part of the NC program as nonexecutable lines, and to execute only 
+the intended part of the program. CNC Operator has the following functions.
+ 
+z Screen image
+ 
+Press the BLOCK SKIP button, the screen to select the number to be skipped is displayed. Multiple 
+numbers can be selected.
+Additional Information
+For information how to specify the block skip number on the NC program, refer to NJ/NY-series 
+G code Instruction Reference Manual (Cat. No. O031).
+Block Execution
+Function
+Description
+OPTION STOP
+Defines all the marked lines in the NC program as nonexecutable lines.
+SINGLE BLOCK
+Executes the NC program on a line-by-line basis.
+BLOCK SKIP
+Executes the NC program in units of multiple lines (a block).
+Button
+Description
+OPTION STOP
+Enables and disables the Option Block Skip function. The default setting is OFF.
+SINGLE BLOCK
+Enables and disables the Single Block Skip function. The default setting is OFF.
+BLOCK SKIP
+Enables and disables the Block Skip function. The default setting is OFF.
+3 - 41
+3   Features of CNC Operator
+CNC Operator Operation Manual (O032)
+3-7  MDI (Manual Data Input)
+3
+3-7-2  Vertical button bar
+Runs the machine at the feedrate specified by a parameter instead of the feedrate commanded by the 
+NC program without placing workpieces. This function is used to check the program.
+z Screen image
+• It can be operated in AUTO or MDI mode. The button is not enabled in MANUAL mode.
+• Press the Dry Run button to enable Dry Run. Pressing the Cycle Start button starts the NC pro-
+gram while Dry Run is enabled.
+• To stop Dry Run, press the RESET button.
+• If it is switched to offline, Dry Run is reset.
+The machine lock executes an NC program without outputting command values to the assignment axis. 
+This function is used to calculate only a path using the Controller without operating the actual axes.
+z Screen image
+• It can be operated in AUTO or MDI mode. The button is not enabled in MANUAL mode.
+• Press the Machine Lock button to enable Machine Lock. Pressing the Cycle Start button exe-
+cutes the NC program while Machine Lock is enabled.
+• To stop Machine Lock, press the RESET button.
+• If it is switched to offline, Machine Lock is reset.
+Auxiliary function lock executes an NC program with M codes disabled. This function is used to check 
+only G codes on the actual machine.
+z Screen image
+• It can be operated in AUTO or MDI mode. The button is not enabled in MANUAL mode.
+• Press the Aux Lock button to enable Auxiliary Function Lock. Pressing the Cycle Start button 
+executes the NC program while Auxiliary Function Lock is enabled.
+• To stop Auxiliary Function Lock, press the RESET button.
+• If it is switched to offline, Auxiliary Function Lock is reset.
+Dry Run
+Machine Lock
+Auxiliary Function Lock
+3   Features of CNC Operator
+3 - 42
+CNC Operator Operation Manual (O032)
+This button is to return to the login screen.
+z Screen image
+Logout
+3 - 43
+3   Features of CNC Operator
+CNC Operator Operation Manual (O032)
+3-7  MDI (Manual Data Input)
+3
+3-7-3  Soft Control Panel (Velocity Override)
+This function sets override of feedrate and spindle.
+You can set the feedrate from below menu.
+z Screen image
+ 
+You can change the spindle velocity from below menu.
+z Screen image
+ 
+3-7-3
+Soft Control Panel (Velocity Override)
+Feedrate
+Button
+Description
+-
+Reduces the current override value in decrements of 10%. The minimum value is 
+0%.
++
+Increases the current override value in increments of 10%. The maximum value is 
+500%.
+0%
+Sets the override value to 0%.
+100%
+Sets the override value to 100%.
+Spindle
+Button
+Description
+-
+Reduces the current override value in decrements of 10%. The minimum value is 
+0%.
++
+Increases the current override value in increments of 10%. The maximum value is 
+500%.
+100%
+Sets the override value to 100%.
+STOP
+Stops the spindle started by M code.
+3   Features of CNC Operator
+3 - 44
+CNC Operator Operation Manual (O032)
+The spindle operation is available as a manual operation function.
+ 
+z Screen image
+Displays the buttons to perform SERVO ON, SERVO OFF, or ERROR RESET. Also, this option dis-
+plays the SERVO ON, HOMED, and controller status.
+z Screen image
+You can run the following functions.
+ 
+The following statuses can be checked.
+ 
+Spindle Button
+Function name
+Description
+START
+Pressing the button rotates the spindle axis.
+STOP
+Pressing the button stops the spindle axis that is rotating.
+ORIENTATION
+Pressing the button rotates the spindle axis to the defined phase position.
+CW
+Rotates clockwise. (Default)
+CCW
+Rotates counterclockwise.
+Utilities
+Function name
+Description
+SERVO ON
+Applies Servo ON to all the CNC motors.
+SERVO OFF
+Applies Servo OFF to all the CNC motors.
+ERROR RESET
+Resets errors.
+Status
+Description
+SERVO ON
+Lights up green when all the CNC motors are in Servo ON state.
+HOMED
+Lights up green when all the CNC motors are in Homed state.
+ERR/ALM
+Lights up green when no status error occurs in the CPU Unit, and lights up red when 
+an error occurs.
+3 - 45
+3   Features of CNC Operator
+CNC Operator Operation Manual (O032)
+3-7  MDI (Manual Data Input)
+3
+3-7-4  Manual Mode
+Jogging, homing, MPG, and spindle operations are available in MANUAL mode. These functions only 
+run in MANUAL mode. The MANUAL tab is not enabled in AUTO or MDI mode.
+The following jogging options can be selected.
+ 
+• Use the X, Y, or Z button to select the target axis.
+• Press +Jog to rotate the motor axis clockwise.
+• Press -Jog to rotate the motor axis counter-clockwise.
+Moves by inching the feed axis selected for jogging according to the specified relative movement dis-
+tance, direction, velocity, and acceleration/deceleration.
+z Screen image
+• Specify the Incremental Distance and Acceleration/Deceleration values.
+• Press +Jog to rotate the motor axis clockwise.
+• Press -Jog to rotate the motor axis counter-clockwise.
+3-7-4
+Manual Mode
+Jogging
+Button
+Description
+Jog speed x (1 to 5)
+Changes the jogging speed. Each value can be changed in the Machine View.
+Relative Velocity
+JOG speed button
+Axis 
+Selection
+3   Features of CNC Operator
+3 - 46
+CNC Operator Operation Manual (O032)
+Performs Homing or Homed processing.
+z Screen image
+• Press the HOME button to start homing.
+• To stop homing, press the Cancel button in the dialog box that is displayed during homing.
+Configure the MPG (manual pulse generator) settings.
+z Screen image
+The following settings are available.
+ 
+Homing
+MPG
+Function
+Description
+SELECT MPG DISTANCE
+Changes feed travel distance of MPG operation. Each value can be changed in the 
+Machine View.
+The actual travel distance value is displayed below the button.
+SELECT AXIS TO MPG
+Set the MPG target axis.
+MPG CONTROL
+Enables MPG.
+3 - 47
+3   Features of CNC Operator
+CNC Operator Operation Manual (O032)
+3-8  Test Run
+3
+3-8-1  CNC Motor Compensation
+3-8
+Test Run
+This section describes the machine adjustment procedure used when a machine is operated for provi-
+sional cutting and other testing purposes.
+Rewrite the value of the compensation table on the CNC Controller. This function is available only when 
+connected online to prevent the values from being rewritten unintentionally. If the project is connected 
+online, setting data is loaded from the CNC Controller.
+The following operations are available using this function.
+• Specify the CNC motor compensation table number.
+• Press the IMPORT button to import an external file.
+• Rewrite the setting data loaded from the CNC Controller on the compensation table, and download it 
+to the CNC Controller.
+The external file must be written in the following CSV format using a fixed point.
+<Integer part>. <Decimal part (maximum five digits)>,
+Example: For compensation table data containing 100 rows
+0.0000,
+0.0001,
+0.0002,
+···
+0.0099,
+You cannot use the floating-point format, e.g., 0.1234567e-01.
+Precautions for Correct Use
+The download and import functions are only available in Edit mode.
+3-8-1
+CNC Motor Compensation
+Scroll bar
+3   Features of CNC Operator
+3 - 48
+CNC Operator Operation Manual (O032)
+If an NC program has a problem, take the following actions.
+• On the MDI tab, confirm the program to be fixed.
+• On the AUTO tab, download the program that you fixed again.
+Use the Sysmac Studio to simulate the CNC Controller operations. Refer to the Sysmac Studio Version 
+1 Operation Manual (Cat. No. W504) for details of the simulation functions. 
+1
+Start the Sysmac Studio, then open a project (for which the sequence program, NC programs, 
+and CNC Operator settings are set) used for the CNC machine. 
+2
+Start the Simulator, and transfer the project to the Simulator. 
+3
+Change the connection destination of CNC Operator to the Simulator.
+Refer to Simulated on page 3-9 for information about how to switch to the Simulator. 
+4
+Run various operations using the CNC Operator.
+3-8-2
+Correction of NC Program
+3-8-3
+Simulation
+3 - 49
+3   Features of CNC Operator
+CNC Operator Operation Manual (O032)
+3-9  Field Operation
+3
+3-9-1  Connection with CNC Controller
+3-9
+Field Operation
+After checking the safety of cutting operations and other machine operations through Test Run, start 
+Field Operation (actual operation). This section describes how to start the machine and functions that 
+are available during operations.
+When you start the device, CNC Operator starts to establish a connection to the Controller.
+CNC Operator can be connected to NJ/NY Controllers that support the CNC functions.
+ 
+Controllers that are not specified in the above table cannot be connected. If CNC Operator is connected 
+to a controller other than the above, an error message is displayed, which causes the non-connection 
+state.
+The following provides the procedure to connect CNC Operator to the NJ/NY Controllers.
+1
+Start CNC Operator.
+2
+Open Machine View screen, and select Controller at the top of the tree.
+3
+Enter the IP address of the Controller to be connected, and press the Apply button.
+4
+Press the 
+ (Connect) button.
+5
+Press the Start button.
+The Controller enters a ready-to-start status. The coordinate system number is 1 by default.
+Display NC program information when the NC file is loaded. This information is displayed on the upper 
+part of the axis parameter window.
+3-9-1
+Connection with CNC Controller
+Connectable Devices
+Target model
+Description
+NJ501-5300
+NJ/NY-series NC integrated controller
+NY532-5400-11
+Connection Procedure
+3-9-2
+Display of the Running Program and the Path
+3   Features of CNC Operator
+3 - 50
+CNC Operator Operation Manual (O032)
+Displays the current login user. This information is displayed on the right side of the axis parameter win-
+dow, together with the current date and time.
+Use the following functions to change the display status of CNC Operator.
+ 
+3-9-3
+Login User Information
+3-9-4
+Functions to Change Screen Display
+Function
+Operation
+Full screen
+Displays the application in full screen mode. When you select this function again in 
+full screen mode, the display returns to the previous size.
+Viewing message log
+Displays the message log view area in the right-hand part of the window. When you 
+select this function again in message log view mode, the message log view area is 
+hidden.
+Sub screen display
+Displays each view other than Machine View on another screen.
+Zoom In/Zoom Out
+Zooms in and out of the configuration elements on the screen. The current zoom-in 
+ratio up to 100% is displayed below the + button.
+Full-screen display
+Viewing message log
+Sub screen display
+Zoom In/Zoom Out
+3 - 51
+3   Features of CNC Operator
+CNC Operator Operation Manual (O032)
+3-9  Field Operation
+3
+3-9-5  Alarms
+The ALARMS tab displays the currently detected alarm or information.
+• The displayed alarm or information is identified by the date/timestamp, and displayed in the message 
+log.
+• When several confirmation messages appear, all of them can be cleared by right-clicking on the 
+ALARMS screen and selecting Acknowledge All Alarms.
+ 
+The status bar is displayed at the bottom of the application screen to indicate the status of CNC Opera-
+tor.
+At the lower left of the application screen, an icon indicating the connection status between CNC Oper-
+ator and the Controller is displayed.
+The icon whirls when CNC Operator is connected to the Controller.
+3-9-5
+Alarms
+Icon
+Name
+Description
+WARNING
+The persistent alarm remains active until the failure that has caused 
+the message is cleared.
+Confirmation
+The confirmation message is displayed with a check mark on the 
+right. The message is cleared by pressing the check mark.
+Information
+Displays the CNC Operator status.
+3-9-6
+Message Status Bar
+3-9-7
+Watchdog Indicator
+Alarm check
+Watchdog 
+Indicator 
+3   Features of CNC Operator
+3 - 52
+CNC Operator Operation Manual (O032)
+Displays NC parameters.
+The following items are displayed in the NC parameter window. All the parameters are set to read only 
+mode.
+ 
+3-9-8
+NC Parameter Window
+Item
+Description
+UNITS
+Unit (inch or mm) used, and corresponding G codes (G20/G21)
+FEEDRATE
+Result value, command value, override value
+SPINDLE
+Result value, command value, override value
+G-CODES
+Valid G code in each group of the currently executed NC program
+3 - 53
+3   Features of CNC Operator
+CNC Operator Operation Manual (O032)
+3-9  Field Operation
+3
+3-9-9  Axis Parameter Window
+Displays axis parameters.
+ 
+Precautions for Correct Use
+The relative position is set to 0 if you press the REL POS button during NC program operation.
+ 
+3-9-9
+Axis Parameter Window
+Item
+Operation
+Display mode change
+Pressing an area switches the position to the following corresponding view value.
+• Calculation result position
+• Relative position
+• Machine coordinate position
+• Commanded position
+Symmetry axis name
+Name of the axis to be displayed
+Torque bar
+Indicates the torque state (0 to 100%) by the length of the blue bar.
+Position
+Present axis value Refer to Display mode change on page 3-53 for details.
+FE
+Following error value
+DTG
+Distance to the target position
+Display mode 
+change
+Following 
+error
+Position
+Distance to the 
+target position
+Torque bar
+Symmetry 
+axis name
+3   Features of CNC Operator
+3 - 54
+CNC Operator Operation Manual (O032)
+3-10 Troubleshooting
+This section describes operations that are required when a problem occurs.
+Displays system events and user-defined events inside the Controller. The Controller errors can be 
+cleared individually or collectively. For details on the event viewer, refer to the Sysmac Studio Version1 
+Operation Manual (Cat. No. W504).
+ 
+ 
+Precautions for Correct Use
+When the Simulator is connected, the event viewer function is not available.
+3-10-1 Event Viewer
+Item
+Description
+CONTROLLER EVENT LOG
+Displays event logs of the connected controller.
+USER EVENT LOG
+Displays user event logs of the connected controller.
+Detailed Information
+Displays detailed information for each event.
+Function
+Description
+UPDATE
+Displays the latest information.
+EXPORT
+Outputs event logs to a file.
+RESET ERRORS
+Resets a controller error.
+SWITCH DISPLAY
+Switches the Attached Information View and the Action and Correction View for 
+the detailed information.
+BACK
+Returns to the main view.
+3 - 55
+3   Features of CNC Operator
+CNC Operator Operation Manual (O032)
+3-10  Troubleshooting
+3
+3-10-2  Back Trace
+The Back Trace function traces the operation path in reverse order.
+z Screen image
+• It can be operated in AUTO or MDI mode. The button is not enabled in MANUAL mode.
+• After enabling Back Trace using the Back Trace button, press the Cycle Start button to start Back 
+Trace.
+• To stop Back Trace, press the RESET button.
+Precautions for Correct Use
+Pressing the RESET button stops the operations of the entire NC program. You cannot inter-
+rupt only Back Trace.
+3-10-2 Back Trace
+3   Features of CNC Operator
+3 - 56
+CNC Operator Operation Manual (O032)
+3-11 Starting from the Sysmac Studio
+You can start CNC Operator from Sysmac Studio. When CNC Operator is started from Sysmac Studio, 
+the CNC coordinate system, CNC motor, CNC motor compensation table, destination’s IP address, and 
+FTP setting configured by Sysmac Studio are transferred to CNC Operator through the configuration 
+file. This helps save time as the motor axis and coordinate system settings do not need to be config-
+ured again on CNC Operator.
+The following shows the procedure to inherit the CNC settings from Sysmac Studio and start CNC 
+Operator.
+1
+Start Sysmac Studio and configure the CNC settings.
+Precautions for Correct Use
+If the CNC coordinate system settings are not configured, the following error occurs and Sys-
+mac CNC Operator cannot be started.
+2
+Select Tool -> Launch External Application -> CNC Operator.
+3
+Specify the CNC coordinate system to inherit and the path where CNC Operator is installed, 
+then press the OK button.
+Precautions for Correct Use
+When settings are inherited from Sysmac Studio on Windows installed in the NY-series CNC 
+Controller before CNC Operator is started, the IP address specified by Sysmac Studio is not 
+inherited. Manually specify the IP address of CNC Operator. The default IP address is 
+192.168.254.1.
+A - 1
+A
+CNC Operator Operation Manual (O032)
+A-1 Customization by SDK . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . A-2
+A-2 Setting SYSMAC Gateway, Communications Middleware . . . . . . . . . . . . . A-3
+A-3 Heartbeat Configuration Example  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . A-7
+Appendices
+  Appendices
+A - 2
+CNC Operator Operation Manual (O032)
+A-1 Customization by SDK
+Optional Sysmac CNC Operator Software Development Kit (SYSMAC-RTNC0101D) can be used to 
+customize CNC Operator functions.
+For details, refer to the help manual attached to CNC Operator Software Development Kit (SYS-
+MAC-RTNC0101D).
+A - 3
+  Appendices
+CNC Operator Operation Manual (O032)
+A-2  Setting SYSMAC Gateway, Communications Middleware
+A
+  
+A-2  Setting SYSMAC Gateway, Communi-
+cations Middleware
+CNC Operator performs data exchange with the sequence control program by reading and writing vari-
+ables registered in the CNC Controller via EtherNet/IP message communications.
+CNC Operator uses the SYSMAC Gateway communications middleware for EtherNet/IP message 
+communications.
+This section describes SYSMAC Gateway settings required to establish a communication between 
+CNC Operator and CNC Controller.
+Refer to the online help for details on SYSMAC Gateway. You can access the online help by implement-
+ing the following procedure.
+• From the Windows Start menu, select All Programs - OMRON - Sysmac Gateway - Sysmac Gate-
+way Help.
+Precautions for Correct Use
+• If CNC Operator cannot be connected to the CNC Controller, check that the SYSMAC Gate-
+way communication service is started and that the Ethernet network port is opened.
+• While CNC Operator is connected to the CNC Controller, do not stop the SYSMAC Gateway 
+communication service and do not close the Ethernet network port.
+• If the connection cannot be established even though the Ethernet network port is open, 
+check the following:
+a) the IP address of the destination is correct
+b) the power to the Controller is turned ON
+c) the cable is correctly connected
+d) hubs or other network devices are not malfunctioning
+e) settings of the SYSMAC Gateway Ethernet network port are correct
+f) the Windows firewall software is not blocking communication packets
+  Appendices
+A - 4
+CNC Operator Operation Manual (O032)
+The SYSMAC Gateway settings must be configured in SYSMAC Gateway Console.
+Perform the following procedure to start SYSMAC Gateway Console.
+• From the Windows Start menu, select All Programs - OMRON - SYSMAC Gateway - SYSMAC 
+Gateway Console.
+SYSMAC Gateway Console starts and the following window is displayed.
+The network port settings is required to establish an EtherNet/IP communication with the CNC Control-
+ler.
+To configure the network port settings, select Communication Network on the Control tab of SYS-
+MAC Gateway Console. 
+Select Port ID 2, Ethernet from the Network Port list, and click the Properties button.
+Configure the following settings.
+Starting SYSMAC Gateway Console
+Setting the Network Port
+Item
+Description
+Automatically open port at startup
+Enable this setting to open the network port automatically when the SYS-
+MAC Gateway communication service is started.
+LAN Card
+Specify the network card to communicate with the CNC controller.
+When connecting to the NY-series CNC Controller, select Real-Time 
+Hypervisor PCI Network Adapter.
+IP Address
+Specify the IP address of the network card that you specified for LAN Card.
+When multiple IP addresses are specified for the network card, select the 
+IP address of the same network address as for the destination CNC Con-
+troller.
+A - 5
+  Appendices
+CNC Operator Operation Manual (O032)
+A-2  Setting SYSMAC Gateway, Communications Middleware
+A
+  
+The following example shows a case of connecting to the NJ-series CNC Controller (default IP address: 
+192.168.250.1).
+The following example shows a case of connecting to the NY-series CNC Controller (default IP 
+address: 192.168.254.1).
+ 
+To communicate CNC Operator with the CNC controller, start the SYSMAC Gateway communication 
+service, and open the Ethernet network port.
+Click the Start button or Stop button on the Communications Network window to operate the communi-
+cations service.
+Select Auto for the start-up type to start communications automatically when the computer boots up.
+Starting and Stopping Communications Service
+ 
+  Appendices
+A - 6
+CNC Operator Operation Manual (O032)
+If Autocratically open port at startup option is selected for network port properties, the network port 
+automatically opens when the SYSMAC Gateway communications service is started.
+To operate the network port manually, select the Ethernet network port from the Network port list, and 
+click the Open button or Close button.
+Opening or Closing the Network Port
+A - 7
+  Appendices
+CNC Operator Operation Manual (O032)
+A-3  Heartbeat Configuration Example
+A
+  
+A-3 Heartbeat Configuration Example
+When creating an original sequence control program to transfer data mutually between the CNC Con-
+troller and CNC Operator, configure the sequence control program and CNC Operator program (when 
+using Software Development Kit), taking heartbeats into account.
+The following example shows a control circuit to stop the device safely even if CNC Operator stops in 
+the sequence control program. The control circuit performs heartbeat processing between CNC Opera-
+tor and CNC Controller, and stops the device if heartbeats are lost.
+On the CNC Controller’s ladder program, configure a circuit to monitor the ON/OFF state of a specific 
+bool value variable at the specified interval (example: 5 sec.). In this example, wHeartBeatSig and wIn-
+vHeartBeatSig are monitored by AccumulationTimer. If a monitoring error (timeout) occurs, the speci-
+fied bool value variable is set to ON to notify CNC Operator of the error.
+Describe a circuit to stop the machine safely, for example, to stop all axes when above mentioned vari-
+able is ON.
+Sequence Control Program Description Example
+CncCsCmd[0].Connect...
+CncCsStatus[0].Connec...      
+CncCsCmdSta[0].Conn...
+Command to each 
+function of Sample 
+Program
+[ReadOnly]HMI HMI 
+Connection Status of 
+CS Controled by HMI
+[ReadOnly]HMI Lost 
+Heartbeat signal
+Heartbeat
+wHeartbeatSig
+7
+6
+CncCsCmd[0].Connect...
+CncCsStatus[0].Connec...      
+CncCsCmdSta[0].Conn...
+Command to each 
+function of Sample 
+Program
+[ReadOnly]HMI HMI 
+Connection Status of 
+CS Controled by HMI
+[ReadOnly]HMI Lost 
+Heartbeat signal
+winvHeartbeatSig
+  Appendices
+A - 8
+CNC Operator Operation Manual (O032)
+The following example shows a case of creating a heartbeat configuration application program using 
+CNC Operator Software Development Kit. The specific bool value variable indicating the timeout is read 
+at the specified intervals. If the bool value is set to ON, the program notifies the user of a timeout error.
+// Variable reading setting at specified interval
+            this.heartbeatTimer = new Timer(1000); // 1 second timer
+            this.heartbeatTimer.Elapsed += this.OnHeartbeatElapsed;
+// Variable reading and update processing
+        private void OnHeartbeatElapsed(object sender, ElapsedEventArgs elapsedEven-
+tArgs)
+        {
+            this.heartbeatTimer.Enabled = false;
+            this.heartbeat.Value = !this.heartbeat.Value;
+            this.heartbeatTimer.Enabled = true;
+        }
+Program Description Example Using CNC Operator
+Inst_AccumulationTim...
+Inst_AccumulationTim...
+10
+8
+9
+CncCsCmdSta[0].Conn...
+wHeartbeatSig
+Inst_AccumulationTim...
+AccumulationTimer
+Time#5s
+Enter Variable
+winvHeartbeatSig
+PT
+Reset
+In
+ET
+Q
+PT
+Reset
+In
+ET
+Q
+wInvHeartbeatSig
+Inst_AccumulationTim...
+AccumulationTimer
+Time#5s
+Enter Variable
+wHeartbeatSig
+[ReadOnly]HMI Lost 
+Heartbeat signal
+I - 1
+I
+CNC Operator Operation Manual (O032)
+Index
+I - 2
+CNC Operator Operation Manual (O032)
+ Index
+A
+Actual spindle ............................................................... 3-12
+Alarms .......................................................................... 3-51
+Attached Information .................................................... 3-54
+AUTO ..................................................................3-26, 3-28
+Aux Lock ....................................................................... 3-37
+Auxiliary Function Lock ................................................ 3-41
+Axis Parameter Window ............................................... 3-53
+Axis Settings ................................................................. 3-10
+B
+Back Trace ................................................................... 3-55
+Block Execution ...................................................3-37, 3-40
+Block skip ..................................................................... 3-40
+C
+CAD/CAM ..............................................................2-6, 3-32
+CNC Controller ......................................................1-2, 3-49
+CNC coordinate system ................................................. 2-5
+CNC Motor Compensation ........................................... 3-47
+command spindle ......................................................... 3-12
+Commanded Position ................................................... 3-11
+console ........................................................................... 1-2
+Controller event log ...................................................... 3-54
+CSV ............................................................3-29, 3-31, 3-47
+Current Line .................................................................. 3-12
+CW/CCW ...................................................................... 3-44
+Cycle Start ...........................................................3-37, 3-39
+D
+debugging ....................................................................... 2-6
+Device Status ................................................................. 3-8
+Display of the Running Program and the Path ............. 3-49
+download ...................................................................... 3-47
+Downloading ........................................................3-30, 3-31
+Dry Run ...............................................................3-37, 3-41
+DTG .............................................................................. 3-53
+E
+Edit ............................................................................... 3-28
+Editor ..............................................................3-6, 3-7, 3-26
+Elapsed time ................................................................. 3-12
+ERR/ALM ..................................................................... 3-44
+ERROR RESET ........................................................... 3-44
+Event Viewer .........................................................3-7, 3-54
+Executing Status ........................................................... 3-12
+EXPORT ....................................................................... 3-54
+Exporting .............................................................3-29, 3-31
+F
+FE ................................................................................. 3-53
+FEED HOLD ................................................................. 3-39
+Feedrate ....................................................................... 3-43
+Feedrate Override ........................................................ 3-37
+FTP ......................................................................... 2-5, 3-9
+FTP login user name ...................................................... 3-9
+FTP password ................................................................ 3-9
+FTP port number ............................................................ 3-9
+Full screen ............................................................. 3-4, 3-50
+Full Screen Editor ......................................................... 3-34
+G
+G Code Editor ....................................................... 2-6, 3-32
+G code monitoring ........................................................ 3-32
+G-CODE PARSE .......................................................... 3-34
+H
+Heartbeat .......................................................................A-7
+HOMED ........................................................................ 3-44
+Horizontal bar ........................................................ 3-6, 3-26
+I
+IMPORT ....................................................................... 3-47
+Importing ............................................................. 3-30, 3-31
+ini file ............................................................................ 3-16
+Installation ...................................................................... 2-2
+IP Address ...............................................................3-8, A-4
+J
+Jog Velocity .................................................................. 3-22
+Jogging ......................................................................... 3-45
+L
+Log Values .................................................................... 3-25
+Login name .................................................................. 3-18
+Login User Information ................................................. 3-50
+Logout .......................................................................... 3-42
+M
+M code ......................................................................... 3-33
+M codes ........................................................................ 3-16
+Machine Lock ...................................................... 3-37, 3-41
+Machine Mode ................................................................ 3-8
+Machine Position .......................................................... 3-11
+Machine View ................................................................. 3-5
+Main View ....................................................................... 3-6
+MANUAL ...................................................................... 3-45
+Manual ................................................................ 3-26, 3-28
+MDI .............................................................3-26, 3-28, 3-37
+Memo ........................................................................... 3-25
+Message Log ....................................................... 3-19, 3-25
+Modal Group ................................................................ 3-13
+Motion axis settings ........................................................ 2-5
+MPG ............................................................................. 3-46
+MPG Speed .................................................................. 3-23
+I - 3
+CNC Operator Operation Manual (O032)
+Index
+I
+N
+NC Parameter Window .................................................3-52
+NC program ..................................................................3-39
+NC Program Size ..........................................................3-21
+NC Programs ................................................................3-32
+NC Subprograms ................................................ 3-34, 3-35
+.NET Framework .............................................................2-2
+Network Settings .............................................................2-5
+Number of Decimal Places ...........................................3-22
+O
+Operating Mode ............................................................3-28
+Operating Time .............................................................3-29
+Operator rights .................................................... 3-17, 3-20
+OPTION STOP .............................................................3-40
+Orientation ....................................................................3-44
+P
+Password ........................................................................3-4
+Performs Homing ..........................................................3-46
+Pin .................................................................................3-14
+Program Position ..........................................................3-11
+program sample ..............................................................2-5
+Programming ..................................................................2-6
+Q
+Queue ................................................................. 3-26, 3-36
+R
+Radius Wear .................................................................3-29
+Relative Position ...........................................................3-11
+Relative Velocity ............................................................3-45
+RESET ..........................................................................3-39
+RESET ERRORS ..........................................................3-54
+S
+SDK ................................................................................ A-2
+Search and replace .......................................................3-33
+Select language ..............................................................3-4
+Servo Drive settings and adjustment ..............................2-5
+SERVO OFF .................................................................3-44
+SERVO ON ...................................................................3-44
+Shut Down ....................................................................3-17
+Simulated ........................................................................3-9
+Simulation Connection ..................................................3-48
+Single Block ..................................................................3-40
+Soft Control Panel ........................................ 3-6, 3-26, 3-43
+Spindle Override ...........................................................3-12
+Start Up .........................................................................3-17
+Starting and Exiting .........................................................3-3
+Starting from the Sysmac Studio ...................................3-56
+Status Bar ............................................................. 3-6, 3-51
+SYSMAC Gateway ................................................. 2-6, A-3
+Sysmac Studio .......................................................1-2, 3-56
+system configuration .......................................................2-4
+T
+Tab Display ...................................................................3-19
+Technician .....................................................................3-17
+Timeout ................................................................3-23, 3-24
+Tool ...............................................................................3-12
+Tool Length ...................................................................3-29
+Tool Offsets ...................................................................3-29
+Tool Radius ...................................................................3-29
+Tool Wear ......................................................................3-29
+Torque bar .....................................................................3-53
+Transferring ..............................................................2-5, 2-6
+U
+Unit ......................................................................3-21, 3-22
+update interval of data ..................................................3-18
+Uploading .............................................................3-30, 3-31
+Usage Count .................................................................3-29
+USB dongle ..............................................................2-2, 3-3
+User event log ...............................................................3-54
+User name ......................................................................3-4
+Utilities ..........................................................................3-44
+V
+Value History .................................................................3-25
+Vertical bar ......................................................................3-6
+Vertical button bar ...................................... 3-26, 3-28, 3-39
+W
+Watchdog Indicator .......................................................3-51
+Windows ..................................................................2-2, 2-3
+Workpiece Offset ..........................................................3-30
+Z
+Zoom In/Zoom Out ........................................................3-50
+I - 4
+CNC Operator Operation Manual (O032)
+ Index
+Authorized Distributor:
+In the interest of product improvement, 
+specifications are subject to change without notice.
+Cat. No. O032-E1-01
+1017
+ © OMRON Corporation 2017  All Rights Reserved.
+OMRON Corporation      Industrial Automation Company
+OMRON ELECTRONICS LLC
+2895 Greenspoint Parkway, Suite 200 
+Hoffman Estates, IL 60169 U.S.A.
+Tel: (1) 847-843-7900/Fax: (1) 847-843-7787
+Regional Headquarters
+OMRON EUROPE B.V.
+Wegalaan 67-69, 2132 JD Hoofddorp
+The Netherlands
+Tel: (31)2356-81-300/Fax: (31)2356-81-388
+ Contact:  www.ia.omron.com
+Kyoto, JAPAN
+OMRON ASIA PACIFIC PTE. LTD.
+No. 438A Alexandra Road # 05-05/08 (Lobby 2), 
+Alexandra Technopark, 
+Singapore 119967
+Tel: (65) 6835-3011/Fax: (65) 6835-2711
+OMRON (CHINA) CO., LTD.
+Room 2211, Bank of China Tower, 
+200 Yin Cheng Zhong Road, 
+PuDong New Area, Shanghai, 200120, China
+Tel: (86) 21-5037-2222/Fax: (86) 21-5037-2200
